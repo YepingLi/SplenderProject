@@ -1,0 +1,19 @@
+{
+  "properties": [
+    {
+      "name": "app.name",
+      "type": "java.lang.String",
+      "description": "Description for app.name."
+    },
+    {
+      "name": "app.registration-name",
+      "type": "java.lang.String",
+      "description": "Description for app.registration-name."
+    },
+    {
+      "name": "app.display-name",
+      "type": "java.lang.String",
+      "description": "Description for app.display-name."
+    }
+  ]
+}

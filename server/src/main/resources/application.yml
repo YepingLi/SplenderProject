@@ -1,0 +1,28 @@
+lobby-service:
+  infra:
+    api:
+      url: http://localhost:4242/api
+    auth:
+      url: http://localhost:4242/oauth
+server:
+  servlet:
+    context-path: /api
+logging:
+  level:
+    org:
+      mcgill:
+        splendorapi: DEBUG
+app:
+  name: SplendorApi-Hexanome03
+  display-name: Hexanome03 Game Service
+  path-to-games: savedGames
+  min-players: 3
+  max-players: 5
+  max-timeout: 120000
+  game-id-length: 12
+  # Credentials for OAuth token retrieval (required for registration at Lobby-Service)
+  auth-credentials:
+    name: xox
+    password: laaPhie*aiN0
+    token: Basic YmdwLWNsaWVudC1uYW1lOmJncC1jbGllbnQtcHc=
+  card-defs: cards.xml

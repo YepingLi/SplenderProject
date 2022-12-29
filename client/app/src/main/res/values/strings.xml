@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">Splendor</string>
+    <string name="lvl1CardBack">Level 1 Card Backside</string>
+    <string name="close">X</string>
+    <string name="diamond">Diamond</string>
+    <string name="emerald">Emerald</string>
+    <string name="onyx">Onyx</string>
+    <string name="ruby">Ruby</string>
+    <string name="sapphire">Sapphire</string>
+    <string name="gold">Gold</string>
+</resources>

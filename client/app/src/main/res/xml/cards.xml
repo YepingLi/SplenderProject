@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <card>
+        <prestigePoints>3</prestigePoints>
+        <drawable>card1</drawable>
+        <bonus>EMERALD</bonus>
+        <id>cardLvl1</id>
+    </card>
+</resources>
