@@ -1,22 +1,36 @@
 import { environment } from "../environment/environment";
-import { BaseService } from "../shared/BaseService";
+import { HttpClient } from "../shared/httpClient";
 import { authConstants, getFromLocal, getNumberFromLocal, saveToLocal } from "./constants";
-import { TokenResponse } from "./TokenResponse";
+import { TokenResponse } from "../app/models/tokenResponse";
+import { RoleType } from "./roleType";
 
 
-export class AuthService extends BaseService {
+
+export class AuthService {
+    private client: HttpClient;
+    // Acts as a store -> react can cause this value to try to be initialized more than once.
+    private static nextTimeout: NodeJS.Timeout | null = null;
+
     public constructor() {
-        super(environment.lobbyService.getAuthUrl())
+        this.client = new HttpClient(environment.lobbyService.getAuthUrl());
     }
     
     private saveDataToStorage(response: TokenResponse) {
+        console.log("invalid token was: ", response.access_token)
         saveToLocal(authConstants.accessToken, response.access_token);
         saveToLocal(authConstants.startTime, new Date().getTime() + 2000);
         saveToLocal(authConstants.duration, response.expires_in);
     }
+
+    private removeAll() {
+        localStorage.removeItem(authConstants.accessToken);
+        localStorage.removeItem(authConstants.refreshToken);
+        localStorage.removeItem(authConstants.duration);
+        localStorage.removeItem(authConstants.startTime);
+    }
     
     public getToken(username: string, password: string) {
-        return this.post<TokenResponse>(environment.lobbyService.auth.token, {
+        return this.client.post<TokenResponse>(environment.lobbyService.auth.token, {
             headers: {Authorization: environment.lobbyService.auth.authorization}, 
             uriData: {
                 "grant_type": "password",
@@ -41,9 +55,7 @@ export class AuthService extends BaseService {
             return Promise.reject("invalid token");
         }
 
-        console.log("Refreshing token");
-
-        return this.post<TokenResponse>(environment.lobbyService.auth.token, {
+        return this.client.post<TokenResponse>(environment.lobbyService.auth.token, {
             headers: {Authorization: environment.lobbyService.auth.authorization}, 
             uriData: {
                 "grant_type": "refresh_token",
@@ -55,10 +67,7 @@ export class AuthService extends BaseService {
             }
             return value;
         }).catch((err) => {
-            localStorage.removeItem(authConstants.accessToken);
-            localStorage.removeItem(authConstants.refreshToken);
-            localStorage.removeItem(authConstants.duration);
-            localStorage.removeItem(authConstants.startTime);
+            this.removeAll();
             throw err;
         });
     }
@@ -71,7 +80,7 @@ export class AuthService extends BaseService {
         } catch (error) {
             return Promise.reject("invalid token");
         }
-        return this.get<string>(environment.lobbyService.auth.username, {
+        return this.client.get<string>(environment.lobbyService.auth.username, {
             uriData: {
                 access_token: token
             }
@@ -92,11 +101,11 @@ export class AuthService extends BaseService {
             return Promise.reject("invalid token");
         }
 
-        return this.get<string[]>(environment.lobbyService.auth.role, {
+        return this.client.get<RoleType[]>(environment.lobbyService.auth.role, {
             uriData: {
                 access_token: token
             }
-        });
+        }).then((roleList) => roleList.map(role => role.authority));
     }
 
     /**
@@ -105,6 +114,7 @@ export class AuthService extends BaseService {
      * @returns promise with the token response
      */
     private async refresher() {
+        AuthService.nextTimeout = null;
         return this.refreshToken().then(this.silentRenewToken.bind(this));
     }
 
@@ -118,12 +128,46 @@ export class AuthService extends BaseService {
 
         let secondsToExp = (tokenTime + duration) - now;
         if (secondsToExp < 60){
-            console.log("time to refresh: ", secondsToExp, tokenTime, duration, now, (tokenTime + duration));
             this.refresher();
+            return;
         }
         
-        // Start the countdown
+        if (AuthService.nextTimeout !== null) {
+            return;
+        }
+
         let refreshIn = (secondsToExp - 60) * 1000;
-        setTimeout(this.refresher.bind(this), refreshIn);
+        AuthService.nextTimeout = setTimeout(this.refresher.bind(this), refreshIn);
+    }
+    
+    /**
+     * Perform the logout requested
+     * 
+     * @returns A failure or the result of the logout 
+     */
+    public logout(): Promise<string | unknown> {
+        let token;
+        try {
+            token = getFromLocal(authConstants.accessToken);
+        } catch (err) {
+            return Promise.reject("Failed to retrieve token");
+        }
+
+        this.removeNextRenew();
+
+        return this.client.delete(
+            environment.lobbyService.auth.deleteToken,
+            {uriData: {access_token: token}}
+        ).then(() => {
+            this.removeAll();
+        });
+    }
+
+    public removeNextRenew() {
+        // Remove the token if we logout
+        if (AuthService.nextTimeout) {
+            clearTimeout(AuthService.nextTimeout);
+            AuthService.nextTimeout = null;
+        }
     }
 }

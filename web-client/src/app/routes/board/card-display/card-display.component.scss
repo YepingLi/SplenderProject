@@ -1,0 +1,9 @@
+.card-holder {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+
+    .game-card {
+        margin: auto;
+    }
+}

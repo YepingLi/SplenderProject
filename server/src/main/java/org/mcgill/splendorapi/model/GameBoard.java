@@ -6,7 +6,9 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
+import java.util.Random;
 import java.util.stream.Collectors;
+
 import lombok.Builder;
 import lombok.extern.jackson.Jacksonized;
 import org.mcgill.splendorapi.model.exceptions.GameBoardException;
@@ -116,6 +118,7 @@ public class GameBoard {
    * @return The gameboard object
    */
   public GameBoard init() {
+    Random random = new Random();
     deck.forEach(card -> {
       switch (card.getLevel()) {
         case 3:
@@ -128,6 +131,14 @@ public class GameBoard {
           levelOne.add(card);
       }
     });
+
+    // make the cards face the right side up
+    for (int i = 0; i < 3; i++) {
+      levelThree.get(random.nextInt(levelThree.size())).turnOver(i);
+      levelTwo.get(random.nextInt(levelTwo.size())).turnOver(i);
+      levelOne.get(random.nextInt(levelOne.size())).turnOver(i);
+    }
+
 
     return this;
   }

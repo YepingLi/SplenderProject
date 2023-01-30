@@ -1,13 +1,9 @@
 package org.mcgill.splendorapi.model;
 
 import org.junit.jupiter.api.Test;
-import org.junit.jupiter.api.function.Executable;
 import org.mcgill.splendorapi.model.exceptions.GameBoardException;
 import org.mcgill.splendorapi.model.exceptions.IllegalMoveException;
 
-
-
-import java.sql.Array;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
@@ -33,7 +29,7 @@ class GameBoardTest {
   @Test
   void levelOneCards() {
     List<Card> Deck = new ArrayList<>();
-    testCard1.turnOver();
+    testCard1.turnOver(1);
     Deck.add(testCard1);
     Deck.add(testCard2);
     Deck.add(testCard3);
@@ -47,7 +43,7 @@ class GameBoardTest {
   @Test
   void levelTwoCards() {
     List<Card> Deck = new ArrayList<>();
-    testCard2.turnOver();
+    testCard2.turnOver(1);
     Deck.add(testCard1);
     Deck.add(testCard2);
     Deck.add(testCard3);
@@ -61,7 +57,7 @@ class GameBoardTest {
   @Test
   void levelThreeCards() {
     List<Card> Deck = new ArrayList<>();
-    testCard3.turnOver();
+    testCard3.turnOver(1);
     Deck.add(testCard1);
     Deck.add(testCard2);
     Deck.add(testCard3);

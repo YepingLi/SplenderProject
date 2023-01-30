@@ -43,7 +43,7 @@ public class GamePlayer extends BasePlayer {
    */
   public List<Gem> buyCard(Card card) throws IllegalMoveException {
     card.changeState(Card.State.PURCHASED);
-    playerPrestige += card.getPrestiagePoints();
+    playerPrestige += card.getPrestigePoints();
     if (!bonuses.containsKey(card.getBonus().getBonusType())) {
       bonuses.put(card.getBonus().getBonusType(), new ArrayList<>());
     }

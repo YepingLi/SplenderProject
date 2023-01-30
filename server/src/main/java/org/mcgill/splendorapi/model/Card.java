@@ -21,26 +21,26 @@ public class Card {
     FREE, PURCHASED, RESERVED
   }
 
-  private static final long serialVersionUID = 1L;
   private final int level;
   private final int id;
   private final Bonus bonus;
-  private final int prestiagePoints;
+  private final int prestigePoints;
   private final String uri;
   private final Map<Gem.Type, Integer> price;
   private State state = State.FREE;
   private Boolean turned = false;
+  private Integer position = -1;
 
   /**
    * Turn the card over.
    *
    * @throws IllegalStateException Thrown when card is already turned
    */
-  public void turnOver() throws IllegalStateException {
+  public void turnOver(int cardPosition) throws IllegalStateException {
     if (turned) {
       throw new IllegalStateException("Cannot turn over card which is already turned over");
     }
-
+    position = cardPosition;
     turned = true;
   }
 

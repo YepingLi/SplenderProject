@@ -1,0 +1,52 @@
+#settings {
+    margin-left: 8%;
+    .Title{
+        font-weight: 700;
+        margin-bottom: 100px;
+     }
+    
+     .username{
+        font-weight: 500;
+     }
+     .passcode {
+        font-weight: 500;
+    }
+    
+    .pwdTextField{
+        font-size: 15px;
+        font-weight: 500;
+    }
+    
+    .colorPicker {
+        margin-bottom: 1rem;
+    }
+    
+    
+    .colorButton {
+        padding: 5px;
+        background: #fff;
+        border-radius: 1px;
+        box-shadow: 0 0 0 1px rgba(0,0,0,.1);
+        display: inline-block;
+        vertical-align: middle;
+        cursor: pointer;
+        margin-left: 10px
+    }
+    
+    .innerColorButton {
+        width: 25px;
+        height: 25px;
+        border-radius: 2px;
+    }
+    
+    .githubPicker{
+        margin-top:5px
+    }
+    
+    .role{
+        font-weight: 500;
+    }
+}
+
+
+

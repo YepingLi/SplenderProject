@@ -12,8 +12,8 @@ import org.junit.Test;
 public class CardTest {
   Bonus testBonus1 = new Bonus(Bonus.BonusType.DIAMOND, 1);
   Bonus testBonus2 = new Bonus(Bonus.BonusType.EMERALD, 1);
-  Map<Gem.Type, Integer> testMap1 = new HashMap<Gem.Type, Integer>(1);
-  Map<Gem.Type, Integer> testMap2 = new HashMap<Gem.Type, Integer>(2);
+  Map<Gem.Type, Integer> testMap1 = new HashMap<>(1);
+  Map<Gem.Type, Integer> testMap2 = new HashMap<>(2);
   Card testCard = new Card(1, 123, testBonus1, 3,"123", testMap1);
 
   @Test
@@ -34,8 +34,8 @@ public class CardTest {
   }
   @Test
   public void getprestiagePointsTest(){
-    assertEquals(3,testCard.getPrestiagePoints());
-    assertNotEquals(6,testCard.getPrestiagePoints());
+    assertEquals(3,testCard.getPrestigePoints());
+    assertNotEquals(6,testCard.getPrestigePoints());
   }
 
   @Test
