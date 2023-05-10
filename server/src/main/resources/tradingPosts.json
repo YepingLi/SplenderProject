@@ -1,0 +1,54 @@
+[
+  {
+    "meta": {
+      "id": 0,
+      "type": "TRADING_POST"
+    },
+    "power": "FREE_GEM_ON_PURCHASE",
+    "requirements": {
+      "RUBY": 3,
+      "DIAMOND": 1
+    }
+  },
+  {
+    "meta": {
+      "id": 1,
+      "type": "TRADING_POST"
+    },
+    "power": "TWO_AND_ONE",
+    "requirements": {
+      "DIAMOND": 2
+    }
+  },
+  {
+    "meta": {
+      "id": 3,
+      "type": "TRADING_POST"
+    },
+    "power": "DOUBLE_GOLD",
+    "requirements": {
+      "SAPPHIRE": 3,
+      "ONYX": 1
+    }
+  },
+  {
+    "meta": {
+      "id": 4,
+      "type": "TRADING_POST"
+    },
+    "power": "FREE_POINTS",
+    "requirements": {
+      "EMERALD": 5
+    }
+  },
+  {
+    "meta": {
+      "id": 5,
+      "type": "TRADING_POST"
+    },
+    "power": "POINTS_PER_MARKER",
+    "requirements": {
+      "ONYX": 3
+    }
+  }
+]

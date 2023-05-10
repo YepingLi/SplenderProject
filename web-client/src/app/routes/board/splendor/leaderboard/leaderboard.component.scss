@@ -1,0 +1,57 @@
+#leaderboard-inner {
+  color: white;
+  background: darkblue;
+  padding: 0.5rem 0.5rem;
+
+  .leaderboard-entry {
+    border-radius: 2rem;
+    color: black;
+    margin: 1rem 0;
+    .grow-entry {
+      display: flex;
+      flex-grow: 1;
+      align-items: center;
+      .color-entry {
+        width: 20px;
+        height: 20px;
+        border-radius: 50%;
+      }
+      .name-point-box {
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+        padding: 0 12.5%;
+        .point-entry {
+          display: flex;
+          align-items: center;
+        }
+      }
+    }
+  }
+}
+
+#leader-modal-body {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  
+  .grow-entry {
+    flex-grow: 1;
+    margin: 0rem 1rem;
+    padding: 0rem 0.5rem;
+  }
+
+  .gem-box {
+    display: flex;
+    flex-direction: row;
+  }
+}
+
+.leader-tokens {
+  width: 40px;
+  height: 40px;
+  border-radius: 4rem;
+  background-color: black;
+  background-size: 100% 100%;
+  margin: auto;
+}

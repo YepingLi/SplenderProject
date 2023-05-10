@@ -1,8 +1,9 @@
 app:
   name: SplendorApi
   registration-name: Hexanome03-Server
-  display-name: Hexanome03 Game Service
+  display-name: Hexanome03 LauncherInfo Service
   path-to-games: testSavedGames
   min-players: 3
   max-players: 5
   max-timeout: 120000
+  card-defs: cards.json

@@ -1,26 +1,27 @@
 import { ICellRendererParams, ValueFormatterParams } from 'ag-grid-community';
 import { AgGridReact } from 'ag-grid-react';
 //import { useHistory } from "react-router-dom";
-import { useNavigate } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import React, { useRef, useState, useEffect, RefObject } from 'react';
 import { Button, Form, InputGroup, Modal } from 'react-bootstrap';
 import Session from '../../models/sessions';
 import { useDispatch, useSelector } from 'react-redux';
-import { sessionSelector, updateSessions, addSession, removeSession } from '../../actions/sessions.actions';
+import { sessionSelector, updateSessions } from '../../actions/sessions.actions';
 import 'ag-grid-community/styles/ag-grid.css'; // Core grid CSS, always needed
 import 'ag-grid-community/styles/ag-theme-alpine.css'; // Optional theme CSS
 import './session.component.scss'
-import { SessionService } from '../../services/sessions.service';
+import { LobbyService } from '../../services/lobby.service';
 import { gameServiceSelector, updateGameServices } from '../../actions/game-services.actions';
 import { MinimalGameService } from '../../models/gameService';
 import { addToast } from '../../actions/toast.actions';
+import { ResponseError } from '../../../shared/httpClient';
 
-const sessionService = new SessionService();
+const sessionService = new LobbyService();
 
 /**
  * Functional Session component
  * @param props The props passed to the component
- * @returns 
+ * @returns
  */
 export function SessionsComponent(props: { username: string }) {
     let gridRef: RefObject<AgGridReact> = useRef(null);
@@ -29,19 +30,57 @@ export function SessionsComponent(props: { username: string }) {
     const navigate = useNavigate();
     // Setting up the objects
     const [showing, setShowing] = useState(false);
-    const gameServers: MinimalGameService[] = useSelector(gameServiceSelector).services;
+    const [gameServers, setGameServices] =  useState<MinimalGameService[]>([]);
     const [selected, setSelected] = useState(0);
     const [saveGameId, setSaveGameId] = useState("");
-    let isDisabled = gameServers.length == 0;
+    const [sessionLongPoll, setSessionPoll] = useState(0);
+    let isDisabled = gameServers.length === 0;
 
     // Hook to get data on component mount. We retreive all data at this point.
     useEffect(() => {
-        sessionService.getSessions().then((sessions) => dispatch(updateSessions(sessions)));
-        sessionService.getGameServices().then((services) => dispatch(updateGameServices(services)));
+        let aborter = new AbortController();
+        if (!showing)
+            return;
+        sessionService.getGameServices(aborter).then((services) => setGameServices(services));
         return () => {
-            console.log("On unmount!");
+            aborter.abort();
         }
-    }, []);
+    }, [showing]);
+
+    /**
+     * Function to handle the long polling of the server
+     * @returns
+     */
+    const longPolling = () => {
+        let updateCounter = () => {
+            setSessionPoll((c) =>  c+1);
+        }
+        let aborter: AbortController = new AbortController();
+        sessionService
+            .pollSession(sessionData, aborter)
+            .then((sessions) => {
+                console.log("Received");
+                updateCounter();
+                dispatch(updateSessions(sessions));
+            })
+            .catch((err: ResponseError) => {
+                console.log(err);
+                if (err.resp === undefined) {
+                    return;
+                }
+                if (err.resp.status >= 400 && err.resp.status !== 408) {
+                    // Try again in 5 seconds
+                    window.location.href = "/";
+                    return;
+                }
+                updateCounter();
+            });
+        return () => {
+            aborter.abort();
+        }
+    }
+
+    useEffect(longPolling, [sessionLongPoll]);
 
     function createToast(msg: string) {
         dispatch(addToast({msg: msg, source: "Sessions"}))
@@ -59,20 +98,23 @@ export function SessionsComponent(props: { username: string }) {
             return (
                 <>
                     <Button onClick={() => handleDelete(param.id)}>Delete</Button>
-                    {param.players.length >= param.gameParameters.minSessionPlayers &&
-                        (<Button onClick={() => handleLaunch(param, user)} disabled={param.players.length > param.gameParameters.minSessionPlayers}>
-                            Launch
-                        </Button>
-                    )}
+                    <Button onClick={() => handleLaunch(param)} disabled={param.players.length < param.gameParameters.minSessionPlayers || param.players.length > param.gameParameters.maxSessionPlayers}>
+                        Launch
+                    </Button>
+                    <Link to={`/admin/${param.id}`}>
+                        <Button>Admin</Button>
+                    </Link>
                 </>
             )
         } else if (param.players.includes(user) && param.launched) {
-            return (<Button onClick={() => navigate(`/board/${param.id}`)}>Play</Button>)
+            return (<Button onClick={() =>{
+                window.location.href = `/board/${param.id}`;
+            }}>Play</Button>)
         }
         else if (param.players.length < param.gameParameters.maxSessionPlayers && !param.players.includes(user)) {
             return (<Button onClick={() => handleJoinEvent(param.id, user)}>Join</Button>)
         } else if (param.players.includes(user)) {
-            return (<Button onClick={() => handleLeaveEvent(param.id, user)}>Leave</Button>);
+            return (<Button onClick={() =>  handleLeaveEvent(param.id, user)}>Leave</Button>);
         }
         return (
             <Button disabled={true}>No actions</Button>
@@ -80,11 +122,13 @@ export function SessionsComponent(props: { username: string }) {
     }
 
     function handleJoinEvent(sessionId: string, username: string) {
-        sessionService.joinSession(sessionId, username);
+        sessionService.joinSession(sessionId, username)
+            .catch(() => createToast(`Failed to perform action join on session ${sessionId}`))
     }
 
     function handleLeaveEvent(sessionId: string, username: string) {
         sessionService.leaveSession(sessionId, username)
+            .catch(() => createToast(`Failed to perform action leave on session ${sessionId}`))
     }
     /**
      * Handle the click of the create button.
@@ -97,23 +141,22 @@ export function SessionsComponent(props: { username: string }) {
         sessionService.createSession(props.username, gameServers[selected].name, saveGameId)
             .then((sessionId) => {
                 createToast("Successfully created new session!")
+                console.log("sessionid", sessionId);
                 return sessionService.getSession(sessionId);
-            })
-            .then(session => dispatch(addSession(session)));
+            }).catch(err => err.resp.text().then((t:string)=>createToast(t)) );
     }
     function handleDelete(sessionId: string) {
         sessionService.deleteSession(sessionId) //TODO:
-            .then(() => {
-                createToast(`Successfully deleted session ${sessionId}`);
-                dispatch(removeSession(sessionId))
-            })
+            .then(() => createToast(`Successfully deleted session ${sessionId}`))
+            .catch(() => createToast(`Failed to delete session with id ${sessionId}`));
     }
 
-    //Session is the session id and the token is the user's token.
-    function handleLaunch(session: Session, user: string) {
-        //Sends the request to LS to launch the session
-        sessionService.launchSession(session.id);
 
+    //Session is the session id and the token is the user's token.
+    function handleLaunch(session: Session) {
+        //Sends the request to LS to launch the session
+        sessionService.launchSession(session.id)
+            .catch(() => createToast(`Failed to perform action leave on session ${session.id}`))
     }
 
     let options = gameServers.map((server, index) => {
@@ -164,6 +207,7 @@ export function SessionsComponent(props: { username: string }) {
                 <AgGridReact
                     className="ag-theme-alpine"
                     gridOptions={gridOptions}
+                    defaultColDef={{flex: 1}}
                     ref={gridRef}
                     rowData={sessionData} />
             </div>

@@ -1,0 +1,54 @@
+#noble-holder {
+    display: flex;
+    flex-direction: row;
+    flex-grow: 1;
+}
+
+.noble-display {
+    flex-grow: 1;
+    
+    .noble-card {
+        margin: auto 1%;
+    }
+}
+
+.card-text {
+    color: white;
+    text-overflow: clip;
+    white-space: nowrap;
+    top:3px;
+}
+
+.noble-card-modal {
+    .modal-content {
+        height: 34rem;
+        width: 29.6rem;
+        border-radius: 2rem;
+        .modal-body {
+            padding: 0;
+            border-radius: 2rem;
+            .btn {
+                font-size: 0.8rem;
+            }
+            .claim-action {
+                position: absolute;
+                bottom: -3em;
+                left: -2rem;
+                border-radius: 3rem;
+                width: 4.5rem;
+                height: 4.5rem;
+                size: 4rem;
+                background-color: green;
+            }
+            .reserve-action {
+                position: absolute;
+                bottom: -3em;
+                right: -2rem;
+                border-radius: 3rem;
+                width: 4.5rem;
+                height: 4.5rem;
+                background-color: orange;
+            }
+        }
+    }
+}

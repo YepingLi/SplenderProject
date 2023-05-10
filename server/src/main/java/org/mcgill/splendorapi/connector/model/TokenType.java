@@ -29,7 +29,7 @@ public enum TokenType {
    */
   private static Map<String, TokenType> getMapping() {
     return Arrays.stream(TokenType.values())
-               .collect(Collectors.toMap(TokenType::getValue, value -> value));
+                 .collect(Collectors.toMap(TokenType::getValue, value -> value));
   }
 
   /**
@@ -41,8 +41,8 @@ public enum TokenType {
   @JsonCreator
   public static TokenType fromString(String s) {
     return Optional.of(map.get(s))
-               .orElseThrow(
-                   () -> new IllegalArgumentException(String.format("No value of %s present", s))
-               );
+                   .orElseThrow(
+                     () -> new IllegalArgumentException(String.format("No value of %s present", s))
+                   );
   }
 }

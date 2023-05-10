@@ -2,3 +2,7 @@ target
 .idea
 
 savedGames
+
+splendorapi.iml
+
+src/main/resources/application-DEV_LOCAL.yml

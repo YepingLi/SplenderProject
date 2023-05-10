@@ -30,7 +30,7 @@ const toastSlice = createSlice({
             return state;
         },
         removeToast: (state: ToastState, action: PayloadAction<number>) => {
-            state.toast = state.toast.filter((toast) => toast.id != action.payload);
+            state.toast = state.toast.filter((toast) => toast.id !== action.payload);
             if (state.toast.length === 0) {
                 resetCounter();
             }

@@ -1,0 +1,1217 @@
+[
+  {
+    "meta": {
+      "level": 1,
+      "id": 1,
+      "type": "DEVELOPMENT"
+    },
+    "bonus": "DIAMOND",
+    "prestigePoints": 0,
+    "price": {
+      "SAPPHIRE": 2,
+      "ONYX": 2
+    }
+  },
+  {
+    "meta": {
+      "level": 1,
+      "id": 2,
+      "type": "DEVELOPMENT"
+    },
+    "bonus": "DIAMOND",
+    "prestigePoints": 0,
+    "price": {
+      "RUBY": 2,
+      "ONYX": 1
+    }
+  },
+  {
+    "meta": {
+      "level": 1,
+      "id": 3,
+      "type": "DEVELOPMENT"
+    },
+    "bonus": "DIAMOND",
+    "prestigePoints": 1,
+    "price": {
+      "EMERALD": 3
+    }
+  },
+  {
+    "meta": {
+      "level": 1,
+      "id": 4,
+      "type": "DEVELOPMENT"
+    },
+    "bonus": "DIAMOND",
+    "prestigePoints": 0,
+    "price": {
+      "SAPPHIRE": 3
+    }
+  },
+  {
+    "meta": {
+      "level": 1,
+      "id": 5,
+      "type": "DEVELOPMENT"
+    },
+    "bonus": "DIAMOND",
+    "prestigePoints": 0,
+    "price": {
+      "SAPPHIRE": 2,
+      "EMERALD": 2,
+      "ONYX": 1
+    }
+  },
+  {
+    "meta": {
+      "level": 1,
+      "id": 6,
+      "type": "DEVELOPMENT"
+    },
+    "bonus": "DIAMOND",
+    "prestigePoints": 0,
+    "price": {
+      "DIAMOND": 3,
+      "SAPPHIRE": 1,
+      "ONYX": 1
+    }
+  },
+  {
+    "meta": {
+      "level": 1,
+      "id": 7,
+      "type": "DEVELOPMENT"
+    },
+    "bonus": "DIAMOND",
+    "prestigePoints": 0,
+    "price": {
+      "SAPPHIRE": 1,
+      "EMERALD": 1,
+      "RUBY": 1,
+      "ONYX": 2
+    }
+  },
+  {
+    "meta": {
+      "level": 1,
+      "id": 8,
+      "type": "DEVELOPMENT"
+    },
+    "bonus": "DIAMOND",
+    "prestigePoints": 0,
+    "price": {
+      "SAPPHIRE": 1,
+      "EMERALD": 1,
+      "RUBY": 1,
+      "ONYX": 1
+    }
+  },
+  {
+    "meta": {
+      "level": 1,
+      "id": 9,
+      "type": "DEVELOPMENT"
+    },
+    "bonus": "EMERALD",
+    "prestigePoints": 1,
+    "price": {
+      "ONYX": 4
+    }
+  },
+  {
+    "meta": {
+      "level": 1,
+      "id": 10,
+      "type": "DEVELOPMENT"
+    },
+    "bonus": "EMERALD",
+    "prestigePoints": 0,
+    "price": {
+      "RUBY": 3
+    }
+  },
+  {
+    "meta": {
+      "level": 1,
+      "id": 11,
+      "type": "DEVELOPMENT"
+    },
+    "bonus": "EMERALD",
+    "prestigePoints": 0,
+    "price": {
+      "DIAMOND": 2,
+      "SAPPHIRE": 1
+    }
+  },
+  {
+    "meta": {
+      "level": 1,
+      "id": 12,
+      "type": "DEVELOPMENT"
+    },
+    "bonus": "EMERALD",
+    "prestigePoints": 0,
+    "price": {
+      "SAPPHIRE": 2,
+      "RUBY": 2
+    }
+  },
+  {
+    "meta": {
+      "level": 1,
+      "id":13,
+      "type": "DEVELOPMENT"
+    },
+    "bonus": "EMERALD",
+    "prestigePoints": 0,
+    "price": {
+      "DIAMOND": 1,
+      "SAPPHIRE": 1,
+      "RUBY": 1,
+      "ONYX": 1
+    }
+  },
+  {
+    "meta": {
+      "level": 1,
+      "id": 14,
+      "type": "DEVELOPMENT"
+    },
+    "bonus": "EMERALD",
+    "prestigePoints": 0,
+    "price": {
+      "DIAMOND": 1,
+      "SAPPHIRE": 1,
+      "RUBY": 1,
+      "ONYX": 2
+    }
+  },
+  {
+    "meta": {
+      "level": 1,
+      "id": 15,
+      "type": "DEVELOPMENT"
+    },
+    "bonus": "EMERALD",
+    "prestigePoints": 0,
+    "price": {
+      "DIAMOND": 1,
+      "SAPPHIRE": 3,
+      "EMERALD": 1
+    }
+  },
+  {
+    "meta": {
+      "level": 1,
+      "id": 16,
+      "type": "DEVELOPMENT"
+    },
+    "bonus": "EMERALD",
+    "prestigePoints": 0,
+    "price": {
+      "SAPPHIRE": 1,
+      "RUBY": 2,
+      "ONYX": 2
+    }
+  },
+  {
+    "meta": {
+      "level": 1,
+      "id": 17,
+      "type": "DEVELOPMENT"
+    },
+    "bonus": "ONYX",
+    "prestigePoints": 1,
+    "price": {
+      "SAPPHIRE": 4
+    }
+  },
+  {
+    "meta": {
+      "level": 1,
+      "id": 18,
+      "type": "DEVELOPMENT"
+    },
+    "bonus": "ONYX",
+    "prestigePoints": 0,
+    "price": {
+      "EMERALD": 3
+    }
+  },
+  {
+    "meta": {
+      "level": 1,
+      "id": 19,
+      "type": "DEVELOPMENT"
+    },
+    "bonus": "ONYX",
+    "prestigePoints": 0,
+    "price": {
+      "EMERALD": 2,
+      "RUBY": 1
+    }
+  },
+  {
+    "meta": {
+      "level": 1,
+      "id": 20,
+      "type": "DEVELOPMENT"
+    },
+    "bonus": "ONYX",
+    "prestigePoints": 0,
+    "price": {
+      "DIAMOND": 2,
+      "EMERALD": 2
+    }
+  },
+  {
+    "meta": {
+      "level": 1,
+      "id": 21,
+      "type": "DEVELOPMENT"
+    },
+    "bonus": "ONYX",
+    "prestigePoints": 0,
+    "price": {
+      "DIAMOND": 1,
+      "SAPPHIRE": 2,
+      "EMERALD": 1,
+      "RUBY": 1
+    }
+  },
+  {
+    "meta": {
+      "level": 1,
+      "id": 22,
+      "type": "DEVELOPMENT"
+    },
+    "bonus": "ONYX",
+    "prestigePoints": 0,
+    "price": {
+      "DIAMOND": 1,
+      "SAPPHIRE": 1,
+      "EMERALD": 1,
+      "RUBY": 1
+    }
+  },
+  {
+    "meta": {
+      "level": 1,
+      "id": 23,
+      "type": "DEVELOPMENT"
+    },
+    "bonus": "ONYX",
+    "prestigePoints": 0,
+    "price": {
+      "EMERALD": 1,
+      "RUBY": 3,
+      "ONYX": 1
+    }
+  },
+  {
+    "meta": {
+      "level": 1,
+      "id": 24,
+      "type": "DEVELOPMENT"
+    },
+    "bonus": "ONYX",
+    "prestigePoints": 0,
+    "price": {
+      "DIAMOND": 2,
+      "SAPPHIRE": 2,
+      "RUBY": 1
+    }
+  },
+  {
+    "meta": {
+      "level": 1,
+      "id": 25,
+      "type": "DEVELOPMENT"
+    },
+    "bonus": "RUBY",
+    "prestigePoints": 0,
+    "price": {
+      "SAPPHIRE": 2,
+      "EMERALD": 1
+    }
+  },
+  {
+    "meta": {
+      "level": 1,
+      "id": 26,
+      "type": "DEVELOPMENT"
+    },
+    "bonus": "RUBY",
+    "prestigePoints": 1,
+    "price": {
+      "DIAMOND": 4
+    }
+  },
+  {
+    "meta": {
+      "level": 1,
+      "id": 27,
+      "type": "DEVELOPMENT"
+    },
+    "bonus": "RUBY",
+    "prestigePoints": 0,
+    "price": {
+      "DIAMOND": 3
+    }
+  },
+  {
+    "meta": {
+      "level": 1,
+      "id": 28,
+      "type": "DEVELOPMENT"
+    },
+    "bonus": "RUBY",
+    "prestigePoints": 0,
+    "price": {
+      "DIAMOND": 2,
+      "EMERALD": 1,
+      "ONYX": 2
+    }
+  },
+  {
+    "meta": {
+      "level": 1,
+      "id": 29,
+      "type": "DEVELOPMENT"
+    },
+    "bonus": "RUBY",
+    "prestigePoints": 0,
+    "price": {
+      "DIAMOND": 2,
+      "SAPPHIRE": 1,
+      "EMERALD": 1,
+      "ONYX": 1
+    }
+  },
+  {
+    "meta": {
+      "level": 1,
+      "id": 30,
+      "type": "DEVELOPMENT"
+    },
+    "bonus": "RUBY",
+    "prestigePoints": 0,
+    "price": {
+      "DIAMOND": 1,
+      "SAPPHIRE": 1,
+      "EMERALD": 1,
+      "ONYX": 1
+    }
+  },
+  {
+    "meta": {
+      "level": 1,
+      "id": 31,
+      "type": "DEVELOPMENT"
+    },
+    "bonus": "RUBY",
+    "prestigePoints": 0,
+    "price": {
+      "DIAMOND": 1,
+      "RUBY": 1,
+      "ONYX": 3
+    }
+  },
+  {
+    "meta": {
+      "level": 1,
+      "id": 32,
+      "type": "DEVELOPMENT"
+    },
+    "bonus": "RUBY",
+    "prestigePoints": 0,
+    "price": {
+      "DIAMOND": 2,
+      "RUBY": 2
+    }
+  },
+  {
+    "meta": {
+      "level": 1,
+      "id": 33,
+      "type": "DEVELOPMENT"
+    },
+    "bonus": "SAPPHIRE",
+    "prestigePoints": 0,
+    "price": {
+      "EMERALD": 2,
+      "ONYX": 2
+    }
+  },
+  {
+    "meta": {
+      "level": 1,
+      "id": 34,
+      "type": "DEVELOPMENT"
+    },
+    "bonus": "SAPPHIRE",
+    "prestigePoints": 0,
+    "price": {
+      "DIAMOND": 1,
+      "ONYX": 2
+    }
+  },
+  {
+    "meta": {
+      "level": 1,
+      "id": 35,
+      "type": "DEVELOPMENT"
+    },
+    "bonus": "SAPPHIRE",
+    "prestigePoints": 1,
+    "price": {
+      "RUBY": 4
+    }
+  },
+  {
+    "meta": {
+      "level": 1,
+      "id": 36,
+      "type": "DEVELOPMENT"
+    },
+    "bonus": "SAPPHIRE",
+    "prestigePoints": 0,
+    "price": {
+      "ONYX": 3
+    }
+  },
+  {
+    "meta": {
+      "level": 1,
+      "id": 37,
+      "type": "DEVELOPMENT"
+    },
+    "bonus": "SAPPHIRE",
+    "prestigePoints": 0,
+    "price": {
+      "DIAMOND": 1,
+      "EMERALD": 1,
+      "RUBY": 1,
+      "ONYX": 1
+    }
+  },
+  {
+    "meta": {
+      "level": 1,
+      "id": 38,
+      "type": "DEVELOPMENT"
+    },
+    "bonus": "SAPPHIRE",
+    "prestigePoints": 0,
+    "price": {
+      "DIAMOND": 1,
+      "EMERALD": 1,
+      "RUBY": 2,
+      "ONYX": 1
+    }
+  },
+  {
+    "meta": {
+      "level": 1,
+      "id": 39,
+      "type": "DEVELOPMENT"
+    },
+    "bonus": "SAPPHIRE",
+    "prestigePoints": 0,
+    "price": {
+      "SAPPHIRE": 1,
+      "EMERALD": 3,
+      "RUBY": 1
+    }
+  },
+  {
+    "meta": {
+      "level": 1,
+      "id": 40,
+      "type": "DEVELOPMENT"
+    },
+    "bonus": "SAPPHIRE",
+    "prestigePoints": 0,
+    "price": {
+      "DIAMOND": 1,
+      "EMERALD": 2,
+      "RUBY": 2
+    }
+  },
+  {
+    "meta": {
+      "level": 2,
+      "id": 1,
+      "type": "DEVELOPMENT"
+    },
+    "bonus": "DIAMOND",
+    "prestigePoints": 2,
+    "price": {
+      "EMERALD": 1,
+      "RUBY": 4,
+      "ONYX": 2
+    }
+  },
+  {
+    "meta": {
+      "level": 2,
+      "id": 2,
+      "type": "DEVELOPMENT"
+    },
+    "bonus": "DIAMOND",
+    "prestigePoints": 2,
+    "price": {
+      "RUBY": 5,
+      "ONYX": 3
+    }
+  },
+  {
+    "meta": {
+      "level": 2,
+      "id": 3,
+      "type": "DEVELOPMENT"
+    },
+    "bonus": "DIAMOND",
+    "prestigePoints": 2,
+    "price": {
+      "RUBY": 5
+    }
+  },
+  {
+    "meta": {
+      "level": 2,
+      "id": 4,
+      "type": "DEVELOPMENT"
+    },
+    "bonus": "DIAMOND",
+    "prestigePoints": 3,
+    "price": {
+      "DIAMOND": 6
+    }
+  },
+  {
+    "meta": {
+      "level": 2,
+      "id": 5,
+      "type": "DEVELOPMENT"
+    },
+    "bonus": "DIAMOND",
+    "prestigePoints": 1,
+    "price": {
+      "DIAMOND": 2,
+      "SAPPHIRE": 3,
+      "RUBY": 3
+    }
+  },
+  {
+    "meta": {
+      "level": 2,
+      "id": 6,
+      "type": "DEVELOPMENT"
+    },
+    "bonus": "DIAMOND",
+    "prestigePoints": 1,
+    "price": {
+      "EMERALD": 3,
+      "RUBY": 2,
+      "ONYX": 2
+    }
+  },
+  {
+    "meta": {
+      "level": 2,
+      "id": 7,
+      "type": "DEVELOPMENT"
+    },
+    "bonus": "EMERALD",
+    "prestigePoints": 2,
+    "price": {
+      "DIAMOND": 4,
+      "SAPPHIRE": 2,
+      "ONYX": 1
+    }
+  },
+  {
+    "meta": {
+      "level": 2,
+      "id": 8,
+      "type": "DEVELOPMENT"
+    },
+    "bonus": "EMERALD",
+    "prestigePoints": 1,
+    "price": {
+      "DIAMOND": 3,
+      "EMERALD": 2,
+      "RUBY": 3
+    }
+  },
+  {
+    "meta": {
+      "level": 2,
+      "id": 9,
+      "type": "DEVELOPMENT"
+    },
+    "bonus": "EMERALD",
+    "prestigePoints": 1,
+    "price": {
+      "DIAMOND": 2,
+      "SAPPHIRE": 3,
+      "ONYX": 2
+    }
+  },
+  {
+    "meta": {
+      "level": 2,
+      "id": 10,
+      "type": "DEVELOPMENT"
+    },
+    "bonus": "EMERALD",
+    "prestigePoints": 3,
+    "price": {
+      "EMERALD": 6
+    }
+  },
+  {
+    "meta": {
+      "level": 2,
+      "id": 11,
+      "type": "DEVELOPMENT"
+    },
+    "bonus": "EMERALD",
+    "prestigePoints": 2,
+    "price": {
+      "SAPPHIRE": 5,
+      "EMERALD": 3
+    }
+  },
+  {
+    "meta": {
+      "level": 2,
+      "id": 12,
+      "type": "DEVELOPMENT"
+    },
+    "bonus": "EMERALD",
+    "prestigePoints": 2,
+    "price": {
+      "EMERALD": 5
+    }
+  },
+  {
+    "meta": {
+      "level": 2,
+      "id": 13,
+      "type": "DEVELOPMENT"
+    },
+    "bonus": "ONYX",
+    "prestigePoints": 1,
+    "price": {
+      "DIAMOND": 3,
+      "SAPPHIRE": 2,
+      "EMERALD": 2
+    }
+  },
+  {
+    "meta": {
+      "level": 2,
+      "id": 14,
+      "type": "DEVELOPMENT"
+    },
+    "bonus": "ONYX",
+    "prestigePoints": 2,
+    "price": {
+      "EMERALD": 5,
+      "RUBY": 3
+    }
+  },
+  {
+    "meta": {
+      "level": 2,
+      "id": 15,
+      "type": "DEVELOPMENT"
+    },
+    "bonus": "ONYX",
+    "prestigePoints": 2,
+    "price": {
+      "DIAMOND": 5
+    }
+  },
+  {
+    "meta": {
+      "level": 2,
+      "id": 16,
+      "type": "DEVELOPMENT"
+    },
+    "bonus": "ONYX",
+    "prestigePoints": 3,
+    "price": {
+      "ONYX": 6
+    }
+  },
+  {
+    "meta": {
+      "level": 2,
+      "id": 17,
+      "type": "DEVELOPMENT"
+    },
+    "bonus": "ONYX",
+    "prestigePoints": 2,
+    "price": {
+      "SAPPHIRE": 1,
+      "EMERALD": 4,
+      "RUBY": 2
+    }
+  },
+  {
+    "meta": {
+      "level": 2,
+      "id": 18,
+      "type": "DEVELOPMENT"
+    },
+    "bonus": "ONYX",
+    "prestigePoints": 1,
+    "price": {
+      "DIAMOND": 3,
+      "EMERALD": 3,
+      "ONYX": 2
+    }
+  },
+  {
+    "meta": {
+      "level": 2,
+      "id": 19,
+      "type": "DEVELOPMENT"
+    },
+    "bonus": "RUBY",
+    "prestigePoints": 3,
+    "price": {
+      "RUBY": 6
+    }
+  },
+  {
+    "meta": {
+      "level": 2,
+      "id": 20,
+      "type": "DEVELOPMENT"
+    },
+    "bonus": "RUBY",
+    "prestigePoints": 2,
+    "price": {
+      "ONYX": 5
+    }
+  },
+  {
+    "meta": {
+      "level": 2,
+      "id": 21,
+      "type": "DEVELOPMENT"
+    },
+    "bonus": "RUBY",
+    "prestigePoints": 2,
+    "price": {
+      "DIAMOND": 3,
+      "ONYX": 5
+    }
+  },
+  {
+    "meta": {
+      "level": 2,
+      "id": 22,
+      "type": "DEVELOPMENT"
+    },
+    "bonus": "RUBY",
+    "prestigePoints": 2,
+    "price": {
+      "DIAMOND": 1,
+      "SAPPHIRE": 4,
+      "EMERALD": 2
+
+
+
+
+    }
+  },
+  {
+    "meta": {
+      "level": 2,
+      "id": 23,
+      "type": "DEVELOPMENT"
+    },
+    "bonus": "RUBY",
+    "prestigePoints": 1,
+    "price": {
+      "SAPPHIRE": 3,
+      "RUBY": 2,
+      "ONYX": 3
+    }
+  },
+  {
+    "meta": {
+      "level": 2,
+      "id": 24,
+      "type": "DEVELOPMENT"
+    },
+    "bonus": "RUBY",
+    "prestigePoints": 1,
+    "price": {
+      "DIAMOND": 2,
+      "RUBY": 2,
+      "ONYX": 3
+    }
+  },
+  {
+    "meta": {
+      "level": 2,
+      "id": 25,
+      "type": "DEVELOPMENT"
+    },
+    "bonus": "SAPPHIRE",
+    "prestigePoints": 2,
+    "price": {
+      "SAPPHIRE": 5
+    }
+  },
+  {
+    "meta": {
+      "level": 2,
+      "id": 26,
+      "type": "DEVELOPMENT"
+    },
+    "bonus": "SAPPHIRE",
+    "prestigePoints": 3,
+    "price": {
+      "SAPPHIRE": 6
+    }
+  },
+  {
+    "meta": {
+      "level": 2,
+      "id": 27,
+      "type": "DEVELOPMENT"
+    },
+    "bonus": "SAPPHIRE",
+    "prestigePoints": 1,
+    "price": {
+      "SAPPHIRE": 2,
+      "EMERALD": 2,
+      "RUBY": 3
+    }
+  },
+
+
+
+
+  {
+    "meta": {
+      "level": 2,
+      "id": 28,
+      "type": "DEVELOPMENT"
+    },
+    "bonus": "SAPPHIRE",
+    "prestigePoints": 1,
+    "price": {
+      "SAPPHIRE": 2,
+      "EMERALD": 3,
+      "ONYX": 3
+    }
+  },
+  {
+    "meta": {
+      "level": 2,
+      "id": 29,
+      "type": "DEVELOPMENT"
+    },
+    "bonus": "SAPPHIRE",
+    "prestigePoints": 2,
+    "price": {
+      "DIAMOND": 5,
+      "SAPPHIRE": 3
+    }
+  },
+  {
+    "meta": {
+      "level": 2,
+      "id": 30,
+      "type": "DEVELOPMENT"
+    },
+    "bonus": "SAPPHIRE",
+    "prestigePoints": 2,
+    "price": {
+      "DIAMOND": 2,
+      "RUBY": 1,
+      "ONYX": 4
+    }
+  },
+  {
+    "meta": {
+      "level": 3,
+      "id": 1,
+      "type": "DEVELOPMENT"
+    },
+    "bonus": "SAPPHIRE",
+    "prestigePoints": 5,
+    "price": {
+      "DIAMOND": 7,
+      "SAPPHIRE": 3
+    }
+  },
+  {
+    "meta": {
+      "level": 3,
+      "id": 2,
+      "type": "DEVELOPMENT"
+    },
+    "bonus": "SAPPHIRE",
+    "prestigePoints": 4,
+    "price": {
+      "DIAMOND": 6,
+      "SAPPHIRE": 3,
+      "ONYX": 3
+    }
+  },
+  {
+    "meta": {
+      "level": 3,
+      "id": 3,
+      "type": "DEVELOPMENT"
+    },
+    "bonus": "SAPPHIRE",
+    "prestigePoints": 3,
+    "price": {
+      "DIAMOND": 3,
+      "EMERALD": 3,
+      "RUBY": 3,
+      "ONYX": 5
+    }
+  },
+  {
+    "meta": {
+      "level": 3,
+      "id": 4,
+      "type": "DEVELOPMENT"
+    },
+    "bonus": "SAPPHIRE",
+    "prestigePoints": 4,
+    "price": {
+      "DIAMOND": 7
+    }
+  },
+  {
+    "meta": {
+      "level": 3,
+      "id": 5,
+      "type": "DEVELOPMENT"
+    },
+    "bonus": "RUBY",
+    "prestigePoints": 5,
+    "price": {
+      "EMERALD": 7
+    }
+  },
+  {
+    "meta": {
+      "level": 3,
+      "id": 6,
+      "type": "DEVELOPMENT"
+    },
+    "bonus": "RUBY",
+    "prestigePoints": 3,
+    "price": {
+      "DIAMOND": 3,
+      "SAPPHIRE": 5,
+      "EMERALD": 3,
+      "ONYX": 3
+    }
+  },
+  {
+    "meta": {
+      "level": 3,
+      "id": 7,
+      "type": "DEVELOPMENT"
+    },
+    "bonus": "RUBY",
+    "prestigePoints": 5,
+    "price": {
+      "EMERALD": 7,
+      "RUBY": 3
+    }
+  },
+  {
+    "meta": {
+      "level": 3,
+      "id": 8,
+      "type": "DEVELOPMENT"
+    },
+    "bonus": "RUBY",
+    "prestigePoints": 4,
+    "price": {
+      "SAPPHIRE": 3,
+      "EMERALD": 6,
+      "RUBY": 3
+    }
+  },
+  {
+    "meta": {
+      "level": 3,
+      "id": 9,
+      "type": "DEVELOPMENT"
+    },
+    "bonus": "ONYX",
+    "prestigePoints": 4,
+    "price": {
+      "EMERALD": 3,
+      "RUBY": 6,
+      "ONYX": 3
+    }
+  },
+  {
+    "meta": {
+      "level": 3,
+      "id": 10,
+      "type": "DEVELOPMENT"
+    },
+    "bonus": "ONYX",
+    "prestigePoints": 4,
+    "price": {
+      "RUBY": 7
+    }
+  },
+  {
+    "meta": {
+      "level": 3,
+      "id": 11,
+      "type": "DEVELOPMENT"
+    },
+    "bonus": "ONYX",
+    "prestigePoints": 5,
+    "price": {
+      "RUBY": 7,
+      "ONYX": 3
+    }
+  },
+  {
+    "meta": {
+      "level": 3,
+      "id": 12,
+      "type": "DEVELOPMENT"
+    },
+    "bonus": "ONYX",
+    "prestigePoints": 3,
+    "price": {
+      "DIAMOND": 3,
+      "SAPPHIRE": 3,
+      "EMERALD": 5,
+      "RUBY": 3
+    }
+  },
+  {
+    "meta": {
+      "level": 3,
+      "id": 13,
+      "type": "DEVELOPMENT"
+    },
+    "bonus": "EMERALD",
+    "prestigePoints": 4,
+    "price": {
+      "DIAMOND": 3,
+      "SAPPHIRE": 6,
+      "EMERALD": 3
+    }
+  },
+  {
+    "meta": {
+      "level": 3,
+      "id": 14,
+      "type": "DEVELOPMENT"
+    },
+    "bonus": "EMERALD",
+    "prestigePoints": 4,
+    "price": {
+      "SAPPHIRE": 7
+    }
+  },
+  {
+    "meta": {
+      "level": 3,
+      "id": 15,
+      "type": "DEVELOPMENT"
+    },
+    "bonus": "EMERALD",
+    "prestigePoints": 5,
+    "price": {
+      "SAPPHIRE": 7,
+      "EMERALD": 3
+    }
+  },
+  {
+    "meta": {
+      "level": 3,
+      "id": 16,
+      "type": "DEVELOPMENT"
+    },
+    "bonus": "EMERALD",
+    "prestigePoints": 3,
+    "price": {
+      "DIAMOND": 5,
+      "SAPPHIRE": 3,
+      "RUBY": 3,
+      "ONYX": 3
+    }
+  },
+  {
+    "meta": {
+      "level": 3,
+      "id": 17,
+      "type": "DEVELOPMENT"
+    },
+    "bonus": "DIAMOND",
+    "prestigePoints": 3,
+    "price": {
+      "SAPPHIRE": 3,
+      "EMERALD": 3,
+      "RUBY": 5,
+      "ONYX": 3
+    }
+  },
+  {
+    "meta": {
+      "level": 3,
+      "id": 18,
+      "type": "DEVELOPMENT"
+    },
+    "bonus": "DIAMOND",
+    "prestigePoints": 5,
+    "price": {
+      "DIAMOND": 3,
+      "ONYX": 7
+    }
+  },
+  {
+    "meta": {
+      "level": 3,
+      "id": 19,
+      "type": "DEVELOPMENT"
+    },
+    "bonus": "DIAMOND",
+    "prestigePoints": 4,
+    "price": {
+      "ONYX": 7
+    }
+  },
+  {
+    "meta": {
+      "level": 3,
+      "id": 20,
+      "type": "DEVELOPMENT"
+    },
+    "bonus": "DIAMOND",
+    "prestigePoints": 4,
+    "price": {
+      "DIAMOND": 3,
+      "RUBY":3,
+      "ONYX": 6
+    }
+  }
+]
+
+

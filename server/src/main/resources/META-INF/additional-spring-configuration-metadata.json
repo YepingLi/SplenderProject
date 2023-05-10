@@ -14,6 +14,106 @@
       "name": "app.display-name",
       "type": "java.lang.String",
       "description": "Description for app.display-name."
+    },
+    {
+      "name": "app.path-to-games",
+      "type": "java.lang.String",
+      "description": "Description for app.path-to-games."
+    },
+    {
+      "name": "app.max-timeout",
+      "type": "java.lang.String",
+      "description": "Description for app.max-timeout."
+    },
+    {
+      "name": "app.max-players",
+      "type": "java.lang.String",
+      "description": "Description for app.max-players."
+    },
+    {
+      "name": "app.min-players",
+      "type": "java.lang.String",
+      "description": "Description for app.max-players."
+    },
+    {
+      "name": "app.game-id-length",
+      "type": "java.lang.String",
+      "description": "Description for app.game-id-length."
+    },
+    {
+      "name": "app.auth-credentials.name",
+      "type": "java.lang.String",
+      "description": "Description for app.auth-credentials.name."
+    },
+    {
+      "name": "app.auth-credentials.password",
+      "type": "java.lang.String",
+      "description": "Description for app.auth-credentials.password."
+    },
+    {
+      "name": "app.auth-credentials.token",
+      "type": "java.lang.String",
+      "description": "Description for app.auth-credentials.token."
+    },
+    {
+      "name": "app.card-defs",
+      "type": "java.lang.String",
+      "description": "Description for app.card-defs."
+    },
+    {
+      "name": "app.pathToCards.path",
+      "type": "java.lang.String",
+      "description": "Description for app.pathToCards.path."
+    },
+    {
+      "name": "app.pathToCards.replaceable",
+      "type": "java.lang.String",
+      "description": "Description for app.pathToCards.replaceable."
+    },
+    {
+      "name": "app.pathToCards.defaults",
+      "type": "java.lang.String",
+      "description": "Description for app.pathToCards.defaults."
+    },
+    {
+      "name": "app.pathToCards.defaults[0].name",
+      "type": "java.lang.String",
+      "description": "Description for app.pathToCards.defaults[0].name."
+    },
+    {
+      "name": "app.pathToNobles.path",
+      "type": "java.lang.String",
+      "description": "Description for app.pathToNobles.path."
+    },
+    {
+      "name": "app.pathToNobles.replaceable",
+      "type": "java.lang.String",
+      "description": "Description for app.pathToNobles.replaceable."
+    },
+    {
+      "name": "app.pathToTokens.path",
+      "type": "java.lang.String",
+      "description": "Description for app.pathToTokens.path."
+    },
+    {
+      "name": "app.pathToTokens.replaceable",
+      "type": "java.lang.String",
+      "description": "Description for app.pathToTokens.replaceable."
+    },
+    {
+      "name": "app.registration-information",
+      "type": "java.lang.String",
+      "description": "Description for app.registration-information."
+    },
+    {
+      "name": "app.registration-information.$.endpoint",
+      "type": "java.lang.String",
+      "description": "Description for app.registration-information[0].endpoint."
+    },
+    {
+      "name": "app.registration-information[0].display-name",
+      "type": "java.lang.String",
+      "description": "Description for app.registration-information[0].display-name."
     }
   ]
 }

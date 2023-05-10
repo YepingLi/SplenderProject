@@ -1,33 +1,74 @@
+import Session from "./sessions";
+import {GameService} from "../services/game.service";
+import Player from "./player";
+import { GemType, GemTypeString } from "./game-types";
 
 export interface CardDimension {
-    height: number;
-    width: number;
+    height: number | string;
+    width: number | string;
+}
+
+export interface Meta {
+    id?: number;
+    level? : number;
+    type? : string;
 }
 
 export interface GameCard {
+    cardBack?: boolean;
+    isFree?: boolean;
     position: number;
-    name?: string;
+    meta? : Meta;
+    [key: string]: any;
 }
 
-export enum GemType {
-    DIAMOND, EMERALD, ONYX, RUBY, SAPPHIRE, GOLD
-}
 
-export type GemTypeString = "DIAMOND" | "EMERALD" | "ONYX" | "RUBY" | "SAPPHIRE" | "GOLD";
 
 export interface Gem {
     id: string
-    type: "DIAMOND" | "EMERALD" | "ONYX" | "RUBY" | "SAPPHIRE" | "GOLD"
+    type: GemTypeString
 }
 
-export default interface GameBoard {
+export interface GameBoard {
+    remainingLevelOneCards: number
+    remainingLevelTwoCards: number
+    remainingLevelThreeCards: number
+    faceUpCards : GameCard[]
     nobles: GameCard[]
-    levelOneCards: GameCard[]
-    levelTwoCards: GameCard[]
-    levelThreeCards: GameCard[]
     players: string[]
-    freeGems: Gem[]
+    availableGems: Record<GemTypeString, number>
 }
+
+export interface OrientGameBoard extends GameBoard {
+    remainingLevelOneOrientCards: number
+    remainingLevelTwoOrientCards: number
+    remainingLevelThreeOrientCards: number
+    faceUpOrientCards: GameCard[]
+}
+export interface TradingPostsGameBoard extends GameBoard{
+    remainingLevelOneOrientCards: number
+    remainingLevelTwoOrientCards: number
+    remainingLevelThreeOrientCards: number
+    faceUpOrientCards: GameCard[]
+    tradingPosts: GameCard[]
+}
+export interface CityGameBoard extends GameBoard{
+    remainingLevelOneOrientCards: number
+    remainingLevelTwoOrientCards: number
+    remainingLevelThreeOrientCards: number
+    faceUpOrientCards: GameCard[]
+    cities: GameCard[]
+}
+export default interface Game {
+    board: GameBoard
+    type: "BASE" | "TRADING_POSTS" | "ORIENT" | "CITIES_ORIENT";
+    creator: string;
+    players: Player[];
+    gameServer: string
+    curPlayer: Player;
+    isOver: boolean;
+}
+
 
 export function emptyCard(value: number): GameCard {
     return {

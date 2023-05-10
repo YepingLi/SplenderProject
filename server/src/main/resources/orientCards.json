@@ -1,0 +1,408 @@
+[
+  {
+    "meta": {
+      "level": 1,
+      "id": 1,
+      "type": "ORIENT"
+    },
+    "power": "DOUBLE_GOLD",
+    "prestigePoints": 0,
+    "price": {
+      "EMERALD": 3
+    }
+  },
+  {
+    "meta": {
+      "level": 1,
+      "id": 2,
+      "type": "ORIENT"
+    },
+    "power": "DOUBLE_GOLD",
+    "prestigePoints": 0,
+    "price": {
+      "SAPPHIRE": 3
+    }
+  },
+  {
+    "meta": {
+      "level": 1,
+      "id": 3,
+      "type": "ORIENT"
+    },
+    "power": "DOUBLE_GOLD",
+    "prestigePoints": 0,
+    "price": {
+      "DIAMOND": 3
+    }
+  },
+  {
+    "meta": {
+      "level": 1,
+      "id": 4,
+      "type": "ORIENT"
+    },
+    "power": "DOUBLE_GOLD",
+    "prestigePoints": 0,
+    "price": {
+      "ONYX": 3
+    }
+  },
+  {
+    "meta": {
+      "level": 1,
+      "id": 5,
+      "type": "ORIENT"
+    },
+    "power": "PAIRING",
+    "prestigePoints": 0,
+    "price": {
+      "SAPPHIRE": 3,
+      "EMERALD": 2
+    }
+  },
+  {
+    "meta": {
+      "level": 1,
+      "id": 6,
+      "type": "ORIENT"
+    },
+    "power": "PAIRING",
+    "prestigePoints": 0,
+    "price": {
+      "EMERALD": 3,
+      "ONYX": 2
+    }
+  },
+  {
+    "meta": {
+      "level": 1,
+      "id": 7,
+      "type": "ORIENT"
+    },
+    "power": "PAIRING",
+    "prestigePoints": 0,
+    "price": {
+      "ONYX": 3,
+      "DIAMOND": 2
+    }
+  },
+  {
+    "meta": {
+      "level": 1,
+      "id": 8,
+      "type": "ORIENT"
+    },
+    "power": "DOUBLE_GOLD",
+    "prestigePoints": 0,
+    "price": {
+      "RUBY": 3
+    }
+  },
+  {
+    "meta": {
+      "level": 1,
+      "id": 9,
+      "type": "ORIENT"
+    },
+    "power": "PAIRING",
+    "prestigePoints": 0,
+    "price": {
+      "RUBY": 3,
+      "SAPPHIRE": 2
+    }
+  },
+  {
+    "meta": {
+      "level": 1,
+      "id": 10,
+      "type": "ORIENT"
+    },
+    "power": "PAIRING",
+    "prestigePoints": 0,
+    "price": {
+      "DIAMOND": 3,
+      "RUBY": 2
+    }
+  },
+  {
+    "meta": {
+      "level": 2,
+      "id": 1,
+      "type": "ORIENT"
+    },
+    "bonus": "SAPPHIRE",
+    "power": "RESERVE_NOBLE",
+    "prestigePoints": 1,
+    "price": {
+      "DIAMOND": 2,
+      "SAPPHIRE": 2,
+      "RUBY": 2,
+      "ONYX": 2
+    }
+  },
+  {
+    "meta": {
+      "level": 2,
+      "id": 2,
+      "type": "ORIENT"
+    },
+    "bonus":"RUBY",
+    "power":"RESERVE_NOBLE",
+    "prestigePoints": 1,
+    "price": {
+      "DIAMOND": 2,
+      "SAPPHIRE": 2,
+      "EMERALD": 2,
+      "ONYX": 2
+    }
+  },
+  {
+    "meta": {
+      "level": 2,
+      "id": 3,
+      "type": "ORIENT"
+    },
+    "power": "PAIRING_CASCADE",
+    "prestigePoints": 0,
+    "price": {
+      "EMERALD": 4,
+      "RUBY": 3,
+      "ONYX": 1
+    }
+  },
+  {
+    "meta": {
+      "level": 2,
+      "id": 4,
+      "type": "ORIENT"
+    },
+    "power": "PAIRING_CASCADE",
+    "prestigePoints": 0,
+    "price": {
+      "DIAMOND": 4,
+      "SAPPHIRE": 3,
+      "ONYX": 1
+    }
+  },
+  {
+    "meta": {
+      "level": 2,
+      "id": 5,
+      "type": "ORIENT"
+    },
+    "bonus": "EMERALD",
+    "power": "DOUBLE_BONUS",
+    "prestigePoints": 0,
+    "price": {
+      "DIAMOND": 4,
+      "RUBY": 3
+    }
+  },
+  {
+    "meta": {
+      "level": 2,
+      "id": 6,
+      "type": "ORIENT"
+    },
+    "bonus":"RUBY",
+    "power": "DOUBLE_BONUS",
+    "prestigePoints": 0,
+    "price": {
+      "EMERALD": 4,
+      "ONYX": 3
+    }
+  },
+  {
+    "meta": {
+      "level": 2,
+      "id": 7,
+      "type": "ORIENT"
+    },
+    "bonus": "ONYX",
+    "power": "DOUBLE_BONUS",
+    "prestigePoints": 0,
+    "price": {
+      "RUBY": 4,
+      "SAPPHIRE": 3
+    }
+  },
+  {
+    "meta": {
+      "level": 2,
+      "id": 8,
+      "type": "ORIENT"
+    },
+    "bonus":"DIAMOND",
+    "power": "RESERVE_NOBLE",
+    "prestigePoints": 1,
+    "price": {
+      "SAPPHIRE": 2,
+      "EMERALD": 2,
+      "RUBY": 2,
+      "ONYX": 2
+    }
+  },
+  {
+    "meta": {
+      "level": 2,
+      "id": 9,
+      "type": "ORIENT"
+    },
+    "bonus":"SAPPHIRE",
+    "power": "DOUBLE_BONUS",
+    "prestigePoints": 0,
+    "price": {
+      "ONYX": 4,
+      "DIAMOND": 3
+    }
+  },
+  {
+    "meta": {
+      "level": 2,
+      "id": 10,
+      "type": "ORIENT"
+    },
+    "bonus":"DIAMOND",
+    "power": "DOUBLE_BONUS",
+    "prestigePoints": 0,
+    "price": {
+      "SAPPHIRE": 4,
+      "EMERALD": 3
+    }
+  },
+  {
+    "meta": {
+      "level": 3,
+      "id": 1,
+      "type": "ORIENT"
+    },
+    "bonus":"SAPPHIRE",
+    "power": "LEVEL_THREE_CASCADE",
+    "prestigePoints": 0,
+    "price": {
+      "SAPPHIRE": 1,
+      "EMERALD": 6,
+      "RUBY": 3
+    }
+  },
+  {
+    "meta": {
+      "level": 3,
+      "id": 2,
+      "type": "ORIENT"
+    },
+    "bonus":"EMERALD",
+    "power": "LEVEL_THREE_CASCADE",
+    "prestigePoints": 0,
+    "price": {
+      "EMERALD": 1,
+      "ONYX": 3,
+      "RUBY": 6
+    }
+  },
+  {
+    "meta": {
+      "level": 3,
+      "id": 3,
+      "type": "ORIENT"
+    },
+    "bonus":"RUBY",
+    "power": "LEVEL_THREE_CASCADE",
+    "prestigePoints": 0,
+    "price": {
+      "DIAMOND": 3,
+      "ONYX": 6,
+      "RUBY": 1
+    }
+  },
+  {
+    "meta": {
+      "level": 3,
+      "id": 4,
+      "type": "ORIENT"
+    },
+    "bonus":"ONYX",
+    "power": "LEVEL_THREE_CASCADE",
+    "prestigePoints": 0,
+    "price": {
+      "SAPPHIRE": 3,
+      "DIAMOND": 6,
+      "ONYX": 1
+    }
+  },
+  {
+    "meta": {
+      "level": 3,
+      "id": 5,
+      "type": "ORIENT"
+    },
+    "bonus":"RUBY",
+    "power": "DISCARD_EMERALD",
+    "prestigePoints": 3,
+    "price": {
+    }
+  },
+  {
+    "meta": {
+      "level": 3,
+      "id": 6,
+      "type": "ORIENT"
+    },
+    "bonus":"DIAMOND",
+    "power": "DISCARD_ONYX",
+    "prestigePoints": 3,
+    "price": {
+    }
+  },
+  {
+    "meta": {
+      "level": 3,
+      "id": 7,
+      "type": "ORIENT"
+    },
+    "bonus":"SAPPHIRE",
+    "power": "DISCARD_DIAMOND",
+    "prestigePoints": 3,
+    "price": {
+    }
+  },
+  {
+    "meta": {
+      "level": 3,
+      "id": 8,
+      "type": "ORIENT"
+    },
+    "bonus":"SAPPHIRE",
+    "power": "LEVEL_THREE_CASCADE",
+    "prestigePoints": 0,
+    "price": {
+      "SAPPHIRE": 6,
+      "EMERALD": 3,
+      "DIAMOND": 1
+    }
+  },
+  {
+    "meta": {
+      "level": 3,
+      "id": 9,
+      "type": "ORIENT"
+    },
+    "bonus":"EMERALD",
+    "power": "DISCARD_SAPPHIRE",
+    "prestigePoints": 3,
+    "price": {
+    }
+  },
+  {
+    "meta": {
+      "level": 3,
+      "id": 10,
+      "type": "ORIENT"
+    },
+    "bonus":"ONYX",
+    "power": "DISCARD_RUBY",
+    "prestigePoints": 3,
+    "price": {
+    }
+  }
+]

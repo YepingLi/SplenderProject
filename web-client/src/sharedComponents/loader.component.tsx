@@ -1,19 +1,20 @@
 import React, { useEffect, useState } from "react";
 import { Spinner } from "react-bootstrap";
 
+
 function PeriodAdder(props: {max: number, text: string}) {
     const [numDots, setNumDots] = useState(0);
-    function periodAdderReducer() {
-        let next = (numDots + 1) % props.max;
-        setNumDots(next);
-    }
 
     useEffect(() => {
-        let functId = setTimeout(periodAdderReducer, 250);
+        let functId = setTimeout(() => {
+            let next = (numDots + 1) % props.max;
+            setNumDots(next);
+        }, 250);
+        
         return () => {
             clearTimeout(functId);
         }
-    }, [numDots])
+    }, [numDots, props.max])
     
     let periods = Array.apply(null, Array(numDots + 1)).map(() => "").join(".");
     return (

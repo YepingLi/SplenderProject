@@ -1,0 +1,48 @@
+#player-div {
+  text-align: center;
+  margin: 1% 2.5% 0% 2.5%;
+  display: flex;
+  width: 95%;
+  height: 10rem;
+  background-color: orange;
+  .player-items {
+    display: flex;
+    flex-grow: 1;
+
+    .item-container {
+      flex-grow: 1;
+      display: flex;
+      flex-direction: column;
+    }
+    .flex-4 {
+      flex-grow: 4;
+    }
+  }
+
+  .center-aligned {
+    align-items: center;
+    justify-content: center;
+  }
+}
+
+#reserved-cards {
+  margin: 1rem;
+  padding: 2rem 2rem;
+  text-align: center;
+
+  #reserved-card {
+    display: inline-block;
+    padding: 1rem 1rem;
+    vertical-align: middle;
+  }
+}
+
+#turn-actions-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0 3%;
+  .action-btn {
+    margin: 5%;
+  }
+}

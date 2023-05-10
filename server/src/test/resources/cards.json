@@ -1,0 +1,16 @@
+[
+  {
+    "meta": {
+      "level": 3,
+      "id": 20,
+      "type": "DEVELOPMENT"
+    },
+    "bonus": "DIAMOND",
+    "prestigePoints": 4,
+    "price": {
+      "DIAMOND": 3,
+      "RUBY": 3,
+      "ONYX": 6
+    }
+  }
+]

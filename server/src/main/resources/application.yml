@@ -5,24 +5,59 @@ lobby-service:
     auth:
       url: http://localhost:4242/oauth
 server:
-  servlet:
-    context-path: /api
+  port: 8080
 logging:
   level:
     org:
       mcgill:
         splendorapi: DEBUG
+#  File for the game rules stored in our backend
+spring:
+  config:
+    import: game_rules.yml
 app:
-  name: SplendorApi-Hexanome03
-  display-name: Hexanome03 Game Service
+  registration-information:
+    - name: SplendorApi-Hexanome03-Base
+      display-name: Hexanome03 Base
+      endpoint: BASE
+    - name: SplendorApi-Hexanome03-Orient
+      display-name: Hexanome03 Orient
+      endpoint: ORIENT
+    - name: SplendorApi-Hexanome03-Trading-Posts
+      display-name: Hexanome03 Trading Posts
+      endpoint: TRADING_POSTS
+    - name: SplendorApi-Hexanome03-Cities-Orient
+      display-name: Hexanome03 Cities Orient
+      endpoint: CITIES_ORIENT
   path-to-games: savedGames
-  min-players: 3
+  min-players: 2
   max-players: 5
+  web-support: true
   max-timeout: 120000
+  cache-timeout: 600000
   game-id-length: 12
   # Credentials for OAuth token retrieval (required for registration at Lobby-Service)
   auth-credentials:
     name: xox
     password: laaPhie*aiN0
     token: Basic YmdwLWNsaWVudC1uYW1lOmJncC1jbGllbnQtcHc=
-  card-defs: cards.xml
+  card-defs: cards.json
+  noble-defs: nobles.json
+  orient-defs: orientCards.json
+  trading-post-defs: tradingPosts.json
+  city-defs: cities.json
+  pathToCards:
+    path: gameAssets/Cards/$NAME$Level$LEVEL$/card$ID$.png
+    defaults:
+      - name: name
+        value: ""
+  pathToNobles:
+    path: gameAssets/Nobles/noble$ID$.png
+  pathToTradingPosts:
+    path: gameAssets/TradingPosts/TradingPost$ID$.png
+  pathToTokens:
+    path: gameAssets/Tokens/$ID$.png
+  pathToBackgrounds:
+    path: gameAssets/background.png
+  pathToCities:
+    path: gameAssets/Cities/city$ID$.png

@@ -2,22 +2,24 @@ package org.mcgill.splendorapi.model;
 
 import static org.junit.jupiter.api.Assertions.*;
 
-import java.util.ArrayList;
 import java.util.HashMap;
-import java.util.List;
 import java.util.Map;
+
+import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
-import org.mcgill.splendorapi.model.exceptions.IllegalMoveException;
+import org.mcgill.splendorapi.model.card.Card;
+import org.mcgill.splendorapi.model.card.CardType;
+import org.mcgill.splendorapi.model.card.DevelopmentCard;
+import org.mcgill.splendorapi.model.card.DevelopmentCardMeta;
+import org.mcgill.splendorapi.model.exceptions.InvalidCardType;
 
 class GamePlayerTest {
-  Bonus testBonus1 = new Bonus(Bonus.BonusType.DIAMOND, 1);
-  Bonus testBonus2 = new Bonus(Bonus.BonusType.EMERALD, 1);
-  Map<Gem.Type, Integer> testMap1 = new HashMap<Gem.Type, Integer>(1);
-  Map<Gem.Type, Integer> testMap2 = new HashMap<Gem.Type, Integer>(2);
-  Card testCard1 = new Card(1, 123, testBonus1, 3,"123", testMap1);
-  Card testCard2 = new Card(2, 234, testBonus2, 4,"234", testMap2);
-  GamePlayer testGamePlayer = GamePlayer.builder().name("abc").build();
-  Gem testGem = new Gem("asd","sadsad",true, Gem.Type.DIAMOND);
+  Bonus testBonus1 =  Bonus.EMERALD;
+  Bonus testBonus2 =  Bonus.DIAMOND;
+  Map<GemType, Integer> testMap1 = new HashMap<GemType, Integer>(1);
+  Map<GemType, Integer> testMap2 = new HashMap<GemType, Integer>(2);
+  Player testGamePlayer = Player.builder().name("abc").build();
+  Gem testGem = new Gem("asd", true, GemType.DIAMOND);
 //  @Test
 //  void reserveCard() {
 //    testGamePlayer.reserveCard(testCard1);
@@ -30,24 +32,26 @@ class GamePlayerTest {
 //    List<Gem> a = new ArrayList<>();
 //    assertEquals(a, testGamePlayer.buyCard(testCard1));
 //  }
-
+  @BeforeEach
+  public void setup() throws InvalidCardType {
+    Card testCard1 = new DevelopmentCard(new DevelopmentCardMeta((short) 1, (short) 123,
+                                                                 CardType.DEVELOPMENT),
+                                         testBonus1, 3, testMap1);
+    Card testCard2 = new DevelopmentCard(new DevelopmentCardMeta((short) 2, (short) 234,
+                                                                 CardType.DEVELOPMENT),
+                                         testBonus2, 4, testMap2);
+  }
 
   @Test
   void getPlayerPrestige() {
     assertEquals(0, testGamePlayer.getPlayerPrestige());
   }
 
-  @Test
-  void addGem() {
-    testGamePlayer.addGem(testGem);
-    assertSame( testGamePlayer.gems.get(Gem.Type.DIAMOND).get(0), testGem);
-
-  }
 
   @Test
   void builder() {
-    GamePlayer testGamePlayer =
-        GamePlayer.builder().name("abc").build();
+    Player testGamePlayer =
+        Player.builder().name("abc").build();
     assertEquals("abc", testGamePlayer.getName());
 
   }

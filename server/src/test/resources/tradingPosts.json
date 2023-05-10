@@ -1,0 +1,13 @@
+[
+  {
+    "meta": {
+      "id": 1,
+      "type": "TRADING_POST"
+    },
+    "power": "FREE_GEM_ON_PURCHASE",
+    "requirements": {
+      "RUBY": 3,
+      "DIAMOND": 1
+    }
+  }
+]

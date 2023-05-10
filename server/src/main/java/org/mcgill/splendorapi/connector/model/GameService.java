@@ -17,12 +17,12 @@ public class GameService extends MinimalGameService {
   /**
    * Builds the object.
    *
-   * @param name name of the service.
+   * @param name        name of the service.
    * @param displayName display name of the service.
-   * @param location location of the service.
-   * @param maxPlayers maximum players of the service.
-   * @param support supports.
-   * @param minPlayers min number of players.
+   * @param location    location of the service.
+   * @param maxPlayers  maximum players of the service.
+   * @param support     supports.
+   * @param minPlayers  min number of players.
    */
   @Builder
   public GameService(@JsonProperty("name") String name,

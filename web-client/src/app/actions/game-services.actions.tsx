@@ -1,5 +1,5 @@
 import { PayloadAction, createSlice } from "@reduxjs/toolkit";
-import GameService, { MinimalGameService } from "../models/gameService";
+import { MinimalGameService } from "../models/gameService";
 
 type GameServiceState = {
     services: MinimalGameService[]

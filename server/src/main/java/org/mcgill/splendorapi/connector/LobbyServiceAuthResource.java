@@ -26,4 +26,9 @@ public interface LobbyServiceAuthResource {
                           @RequestParam("password") String pass,
                           @RequestHeader("Authorization") String headers);
 
+  @PostMapping("/token")
+  Token postTokenToken(@RequestParam("grant_type") String grantType,
+                       @RequestParam("refresh_token") String token,
+                       @RequestHeader("Authorization") String headers);
+
 }

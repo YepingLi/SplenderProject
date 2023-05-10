@@ -1,7 +1,0 @@
-PUT
-{BASE_URL}/api/users/{users}
-&access_token={access_token}
-
-# Headers
-@Content-Type: application/json
-

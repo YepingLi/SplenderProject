@@ -1,0 +1,224 @@
+[
+  {
+    "meta": {
+      "id": 1,
+      "type": "NOBLE"
+    },
+    "prestigePoints": 3,
+    "price": {
+      "ONYX": 3,
+      "RUBY": 3,
+      "DIAMOND": 3
+    }
+  },
+  {
+    "meta": {
+      "id": 2,
+      "type": "NOBLE"
+    },
+    "prestigePoints": 3,
+    "price": {
+      "EMERALD":3,
+      "SAPPHIRE": 3,
+      "RUBY": 3
+    }
+  },
+  {
+    "meta": {
+      "id": 3,
+      "type": "NOBLE"
+    },
+    "prestigePoints": 3,
+    "price": {
+      "EMERALD":3,
+      "SAPPHIRE": 3,
+      "DIAMOND": 3
+    }
+  },
+  {
+    "meta": {
+      "id": 4,
+      "type": "NOBLE"
+    },
+    "prestigePoints": 3,
+    "price": {
+      "ONYX": 3,
+      "SAPPHIRE": 3,
+      "DIAMOND": 3
+    }
+  },
+  {
+    "meta": {
+      "id": 5,
+      "type": "NOBLE"
+    },
+    "prestigePoints": 3,
+    "price": {
+      "ONYX": 3,
+      "RUBY": 3,
+      "EMERALD":3
+    }
+  },
+  {
+    "meta": {
+      "id": 6,
+      "type": "NOBLE"
+    },
+    "prestigePoints": 3,
+    "price": {
+      "ONYX": 4,
+      "RUBY": 4
+    }
+  },
+  {
+    "meta": {
+      "id": 7,
+      "type": "NOBLE"
+    },
+    "prestigePoints": 3,
+    "price": {
+      "ONYX": 4,
+      "DIAMOND": 4
+    }
+  },
+  {
+    "meta": {
+      "id": 8,
+      "type": "NOBLE"
+    },
+    "prestigePoints": 3,
+    "price": {
+      "RUBY": 4,
+      "EMERALD":4
+    }
+  },
+  {
+    "meta": {
+      "id": 9,
+      "type": "NOBLE"
+    },
+    "prestigePoints": 3,
+    "price": {
+      "SAPPHIRE": 4,
+      "EMERALD":4
+    }
+  },
+  {
+    "meta": {
+      "id": 10,
+      "type": "NOBLE"
+    },
+    "prestigePoints": 3,
+    "price": {
+      "SAPPHIRE": 4,
+      "DIAMOND": 4
+    }
+  },
+  {
+    "meta": {
+      "id": 11,
+      "type": "NOBLE"
+    },
+    "prestigePoints": 3,
+    "price": {
+      "SAPPHIRE": 4,
+      "RUBY": 4
+    }
+  },
+  {
+    "meta": {
+      "id": 12,
+      "type": "NOBLE"
+    },
+    "prestigePoints": 3,
+    "price": {
+      "EMERALD": 4,
+      "DIAMOND": 4
+    }
+  },
+  {
+    "meta": {
+      "id": 13,
+      "type": "NOBLE"
+    },
+    "prestigePoints": 3,
+    "price": {
+      "SAPPHIRE": 4,
+      "ONYX": 4
+    }
+  },
+  {
+    "meta": {
+      "id": 14,
+      "type": "NOBLE"
+    },
+    "prestigePoints": 3,
+    "price": {
+      "SAPPHIRE": 3,
+      "DIAMOND": 3,
+      "RUBY": 3
+    }
+  },
+  {
+    "meta": {
+      "id": 15,
+      "type": "NOBLE"
+    },
+    "prestigePoints": 3,
+    "price": {
+      "ONYX": 3,
+      "RUBY": 3,
+      "SAPPHIRE": 3
+    }
+  },
+  {
+    "meta": {
+      "id": 16,
+      "type": "NOBLE"
+    },
+    "prestigePoints": 3,
+    "price": {
+      "DIAMOND": 4,
+      "RUBY": 4
+    }
+  },
+  {
+    "meta": {
+      "id": 17,
+      "type": "NOBLE"
+    },
+    "prestigePoints": 3,
+    "price": {
+      "ONYX": 4,
+      "EMERALD": 4
+    }
+  },
+  {
+    "meta": {
+      "id": 18,
+      "type": "NOBLE"
+    },
+    "prestigePoints": 3,
+    "price": {
+      "ONYX": 3,
+      "EMERALD": 3,
+      "SAPPHIRE": 3
+    }
+  },
+  {
+    "meta": {
+      "id": 19,
+      "type": "NOBLE"
+    },
+    "prestigePoints": 3,
+    "price": {
+      "SAPPHIRE": 4,
+      "DIAMOND": 4
+    }
+  }
+
+
+
+
+
+]

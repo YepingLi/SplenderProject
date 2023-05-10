@@ -10,11 +10,15 @@ export class AuthService {
     private client: HttpClient;
     // Acts as a store -> react can cause this value to try to be initialized more than once.
     private static nextTimeout: NodeJS.Timeout | null = null;
-
+    private url: string = environment.lobbyService.getAuthUrl();
     public constructor() {
-        this.client = new HttpClient(environment.lobbyService.getAuthUrl());
+        this.client = new HttpClient();
     }
     
+    private urlProducer(endpoint: string) {
+        return `${this.url}${endpoint}`
+    }
+
     private saveDataToStorage(response: TokenResponse) {
         console.log("invalid token was: ", response.access_token)
         saveToLocal(authConstants.accessToken, response.access_token);
@@ -30,7 +34,7 @@ export class AuthService {
     }
     
     public getToken(username: string, password: string) {
-        return this.client.post<TokenResponse>(environment.lobbyService.auth.token, {
+        return this.client.post<TokenResponse>(this.urlProducer(environment.lobbyService.auth.token), {
             headers: {Authorization: environment.lobbyService.auth.authorization}, 
             uriData: {
                 "grant_type": "password",
@@ -55,7 +59,7 @@ export class AuthService {
             return Promise.reject("invalid token");
         }
 
-        return this.client.post<TokenResponse>(environment.lobbyService.auth.token, {
+        return this.client.post<TokenResponse>(this.urlProducer(environment.lobbyService.auth.token), {
             headers: {Authorization: environment.lobbyService.auth.authorization}, 
             uriData: {
                 "grant_type": "refresh_token",
@@ -80,7 +84,8 @@ export class AuthService {
         } catch (error) {
             return Promise.reject("invalid token");
         }
-        return this.client.get<string>(environment.lobbyService.auth.username, {
+
+        return this.client.get<string>(this.urlProducer(environment.lobbyService.auth.username), {
             uriData: {
                 access_token: token
             }
@@ -101,7 +106,7 @@ export class AuthService {
             return Promise.reject("invalid token");
         }
 
-        return this.client.get<RoleType[]>(environment.lobbyService.auth.role, {
+        return this.client.get<RoleType[]>(this.urlProducer(environment.lobbyService.auth.role), {
             uriData: {
                 access_token: token
             }
@@ -156,7 +161,7 @@ export class AuthService {
         this.removeNextRenew();
 
         return this.client.delete(
-            environment.lobbyService.auth.deleteToken,
+            this.urlProducer(environment.lobbyService.auth.deleteToken),
             {uriData: {access_token: token}}
         ).then(() => {
             this.removeAll();

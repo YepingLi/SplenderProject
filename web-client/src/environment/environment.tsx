@@ -1,12 +1,4 @@
-const PATH_TO_ASSETS = '/gameAssets';
-const PATH_TO_CARDS = `${PATH_TO_ASSETS}/Cards`
-const PATH_TO_TOKENS = `${PATH_TO_ASSETS}/Tokens`
-const PATH_TO_NOBLES = `${PATH_TO_ASSETS}/Nobles`
-
-
-function getSimplePath(inner: string, name: string) {
-    return `${inner}/${name}.png`
-}
+import PasswordInput from "../app/routes/settings/password/password-input.component"
 
 export const environment = {
     lobbyService: {
@@ -29,22 +21,8 @@ export const environment = {
             url: "/api",
             sessions: "/sessions",
             gameServices: "/gameservices",
-            users: "users" //change by yeping to do setting part
+            users: "/users" //change by yeping to do setting part
         },
     },
-    gameAssets: {
-        getCardPath: (name: string, level: number, features?: {isOrient?: boolean, type?: string}) => {
-            if (features?.type && features?.isOrient) {
-                throw new Error("Cannot have orient with type!");
-            }
-            let mid = features?.type ? `${features.type}/`:'';
-            return `${PATH_TO_CARDS}/Level${level}/${mid}${name}.png`;
-        },
-        getNoblePath: (name: string) => {
-            return getSimplePath(PATH_TO_NOBLES, name);
-        },
-        getTokenPath: (name: string) => {
-            return getSimplePath(PATH_TO_TOKENS, name);
-        }
-    }
+    gameAssets: "/assets"
 }

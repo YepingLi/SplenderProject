@@ -27,20 +27,20 @@ public class Scope {
     /**
      * JsonDeserialization for scopes.
      *
-     * @param jsonParser The parser
+     * @param jsonParser             The parser
      * @param deserializationContext the deserialization context
      * @return The scope
      * @throws IOException When not parsable
      */
     @Override
     public Scope deserialize(JsonParser jsonParser, DeserializationContext deserializationContext)
-        throws IOException {
+          throws IOException {
       JsonNode node = jsonParser.readValueAsTree();
       String text = node.asText();
       Stream<String> list = Arrays.stream(text.split(" "));
       return Scope.builder()
-          .scopes(list.collect(Collectors.toSet()))
-          .build();
+                  .scopes(list.collect(Collectors.toSet()))
+                  .build();
     }
   }
 

@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 
 import "./app.scss"
 import AppRouter from './app.router';
@@ -14,11 +14,11 @@ function App(props: {username: string, rights: string[], onLogout: () => void}) 
   const toasts = useSelector(toastSelector).toast;
   const dispatch= useDispatch();
   return (
-    <div id="app" className="app" style={{height: "100vh", width: "100vw",maxHeight: "100vh", maxWidth: "100vw"}}>
+      <div id="app" className="app">
       <AppRouter {...props} />
       <ToastContainer position="top-end">
         {toasts.map((toast) => {
-          const timeout = setTimeout(() => dispatch(removeToast(toast.id)), 7500);
+          const timeout = setTimeout(() => dispatch(removeToast(toast.id)), 2500);
 
           return (
             <Toast key={`toast-${toast.id}`} onClose={() => {

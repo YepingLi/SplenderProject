@@ -10,7 +10,7 @@ public class NoChangeFoundException extends Exception {
   /**
    * Creates no update found error.
    *
-   * @param id Game id
+   * @param id LauncherInfo id
    */
   @Builder
   public NoChangeFoundException(String id) {

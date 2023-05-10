@@ -1,0 +1,7 @@
+game-rules:
+    gem-rules:
+      max: 7
+      min: 2
+      exceptions:
+        - name: GOLD
+          value: 5

@@ -1,0 +1,1 @@
+export type BoardModalType = "PICK_PAYMENT" | "CLAIM_NOBLE" | "BURN_TOKEN";

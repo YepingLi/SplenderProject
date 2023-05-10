@@ -1,0 +1,33 @@
+#gem-area {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    height: 100%;
+    margin:0;
+    .gem-remaining {
+        color: white;
+    }
+    
+    .child{
+        float: left;
+    }
+}
+
+.gem-modal {
+    .modal-content {
+        height: 30.4rem;
+        width: 30rem;
+        border-radius: 20rem;
+        .modal-body {
+            padding: 0;
+            border-radius: 2rem;
+            .btn {
+                font-size: 0.8rem;
+            }
+            .purchase-action {
+                left: 3rem;
+                bottom: 0;
+            }
+        }
+    }
+} 

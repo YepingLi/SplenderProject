@@ -1,0 +1,15 @@
+[
+  {
+    "meta": {
+      "level": 1,
+      "id": 1,
+      "type": "ORIENT"
+    },
+    "bonus": "ONYX",
+    "power": "DOUBLE_GOLD",
+    "prestigePoints": 0,
+    "price": {
+      "EMERALD": 3
+    }
+  }
+]

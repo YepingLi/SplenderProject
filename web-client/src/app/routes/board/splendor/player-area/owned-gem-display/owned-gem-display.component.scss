@@ -1,0 +1,11 @@
+#owned-gem-area {
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  .gem-remaining {
+    color: white;
+  }
+  .owned-gem {
+    height: 100%;
+  }
+}

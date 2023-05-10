@@ -7,6 +7,7 @@ export interface ISession {
     launched: boolean
     players: string[]
     savegameid: string
+    playerLocations: Record<string, string>
 }
 
 export default interface Session extends ISession {

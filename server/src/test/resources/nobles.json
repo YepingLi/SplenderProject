@@ -1,0 +1,14 @@
+[
+  {
+    "meta": {
+      "id": 1,
+      "type": "NOBLE"
+    },
+    "prestigePoints": 3,
+    "price": {
+      "ONYX": 3,
+      "RUBY": 3,
+      "DIAMOND": 3
+    }
+  }
+]

@@ -1,0 +1,162 @@
+[
+  {
+    "meta": {
+      "id": 1,
+      "type": "CITY"
+    },
+    "prestigePoints": 13,
+    "price": {
+      "ONYX": 3,
+      "RUBY": 4
+    }
+  },
+  {
+    "meta": {
+      "id": 2,
+      "type": "CITY"
+    },
+    "prestigePoints": 13,
+    "price": {
+      "DIAMOND":3,
+      "SAPPHIRE": 4
+    }
+  },
+  {
+    "meta": {
+      "id": 3,
+      "type": "CITY"
+    },
+    "prestigePoints": 17,
+    "price": {
+    }
+  },
+  {
+    "meta": {
+      "id": 4,
+      "type": "CITY"
+    },
+    "prestigePoints": 13,
+    "price": {
+      "ONYX": 4,
+      "EMERALD": 3
+    }
+  },
+  {
+    "meta": {
+      "id": 5,
+      "type": "CITY"
+    },
+    "prestigePoints": 13,
+    "price": {
+      "DIAMOND": 4,
+      "RUBY": 3
+    }
+  },
+  {
+    "meta": {
+      "id": 6,
+      "type": "CITY"
+    },
+    "prestigePoints": 16,
+    "price": {
+      "ONYX": 1,
+      "RUBY": 1,
+      "DIAMOND": 1,
+      "EMERALD": 1,
+      "SAPPHIRE": 1
+    }
+  },
+  {
+    "meta": {
+      "id": 7,
+      "type": "CITY"
+    },
+    "prestigePoints": 11,
+    "price": {
+      "ONYX": 3,
+      "RUBY": 3,
+      "DIAMOND": 3,
+      "SAPPHIRE": 3
+    }
+  },
+  {
+    "meta": {
+      "id": 8,
+      "type": "CITY"
+    },
+    "prestigePoints": 12,
+    "price": {
+    }
+  },
+  {
+    "meta": {
+      "id": 9,
+      "type": "CITY"
+    },
+    "prestigePoints": 14,
+    "price": {
+      "EMERALD":4
+    }
+  },
+  {
+    "meta": {
+      "id": 10,
+      "type": "CITY"
+    },
+    "prestigePoints": 14,
+    "price": {
+      "ONYX": 2,
+      "RUBY": 2,
+      "DIAMOND": 2,
+      "EMERALD": 1,
+      "SAPPHIRE": 1
+    }
+  },
+  {
+    "meta": {
+      "id": 11,
+      "type": "CITY"
+    },
+    "prestigePoints": 11,
+    "price": {
+      "ONYX": 3,
+      "RUBY": 3,
+      "DIAMOND": 3,
+      "EMERALD": 3
+    }
+  },
+  {
+    "meta": {
+      "id": 12,
+      "type": "CITY"
+    },
+    "prestigePoints": 15,
+    "price": {
+    }
+  },
+  {
+    "meta": {
+      "id": 13,
+      "type": "CITY"
+    },
+    "prestigePoints": 13,
+    "price": {
+      "SAPPHIRE": 3,
+      "EMERALD": 4
+    }
+  },
+  {
+    "meta": {
+      "id": 14,
+      "type": "CITY"
+    },
+    "prestigePoints": 13,
+    "price": {
+      "ONYX": 2,
+      "RUBY": 2,
+      "DIAMOND": 2,
+      "EMERALD": 2,
+      "SAPPHIRE": 2
+    }
+  }
+]

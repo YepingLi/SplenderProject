@@ -1,4 +1,4 @@
-import { json } from "stream/consumers";
+import { HttpObserver } from "./observer";
 
 export type PostableData = {
     data?: Record<string, any>,
@@ -15,11 +15,17 @@ export class ResponseError extends Error {
     }
 }
 
+
 export class HttpClient {
-    private url: string;
-    
-    public constructor(url: string) {
-        this.url = url;
+    private observers: HttpObserver[];
+    constructor(observers?: HttpObserver[]) {
+        this.observers = observers !== undefined ? observers : [];
+    }
+
+    private handleHttpCall(url: string, next: (url: string, data?: PostableData) => Promise<any>, postable?: PostableData) {
+        return this.observers.reduce((finalPromise: Promise<PostableData | undefined>, observer) => {
+            return finalPromise.then((data) => observer.observe(data));
+        }, Promise.resolve(postable)).then((p) => next(url, p));
     }
 
     /**
@@ -29,31 +35,26 @@ export class HttpClient {
      * @param data The data to eb added into the URL
      * @returns The encoded URL
      */
-    private urlBuilder(endpoint: string, data?: any) {
+    private urlBuilder(url: string, data?: any) {
         let strData = "";
         if (data !== null || data !== undefined) {
             strData = Object.keys(data).map((value) => `${value}=${encodeURIComponent(data[value])}`).join("&");
-        }
-        let url;
-        switch(endpoint.charAt(0)) {
-            case "/":
-                url = `${this.url}${endpoint}`
-                break;
-            default:
-                url = `${this.url}/${endpoint}`
-                
         }
         
         if (strData.length > 0) {
             url = url.concat("?", strData);
         }
-        
         return url;
-        
     }
     
+    /**
+     * Handles the response and deserialization.
+     * 
+     * @param response 
+     * @returns 
+     */
     private handleCallback(response: Response) {
-        if (response.status < 299) {
+        if (response.status < 399) {
             let contentType = response.headers.get("Content-Type");
             if (contentType && /^text\/plain.*/.test(contentType)) {
                 return response.text();
@@ -72,41 +73,65 @@ export class HttpClient {
         throw new ResponseError(response);
     }
 
-    public get<T>(endpoint: string, {headers, uriData}: PostableData): Promise<T>;
-    public get(endpoint: string, {headers, uriData}: PostableData): Promise<any> {
-        return fetch(this.urlBuilder(endpoint, uriData), {
+    private handleGet(endpoint: string, data?: PostableData, abort?: AbortController) {
+        let signal = abort !== undefined ? abort.signal: undefined;
+        return fetch(this.urlBuilder(endpoint, data?.uriData), {
             method: "GET",
-            headers: headers
+            headers: data?.headers,
+            signal: signal
         }).then(this.handleCallback);
     }
 
-    public post<T>(endpoint: string, {data, headers, uriData}: PostableData): Promise<T>;
-    public post(endpoint: string, {data, headers, uriData}: PostableData) {
-        return fetch(this.urlBuilder(endpoint, uriData), {
+    public get<T>(endpoint: string, data?: PostableData, abort?: AbortController): Promise<T>;
+    public get(endpoint: string, data?: PostableData, abort?: AbortController): Promise<any> {
+        return this.handleHttpCall(endpoint, (url, sendableData) => this.handleGet(url, sendableData, abort), data);
+    }
+    
+    private handlePost(endpoint: string, data?: PostableData) {
+        return fetch(this.urlBuilder(endpoint, data?.uriData), {
             method: "POST",
             headers: {
                 "Content-Type": "application/json;charset=UTF-8",
-                ...headers
+                ...data?.headers
             },
-            body: JSON.stringify(data)
+            body: JSON.stringify(data?.data)
         }).then(this.handleCallback);
     }
 
-    public put<T>(endpoint: string, {data, headers, uriData}: PostableData): Promise<T>;
-    public put(endpoint: string, {data, headers, uriData}: PostableData): Promise<any> {
-        return fetch(this.urlBuilder(endpoint, uriData), {
+    public post<T>(endpoint: string, data?: PostableData): Promise<T>;
+    public post(endpoint: string, data?: PostableData) {
+        return this.handleHttpCall(endpoint, (url, sendableData) => this.handlePost(url, sendableData), data);
+    }
+
+    private handlePut(endpoint: string, data?: PostableData) {
+        return fetch(this.urlBuilder(endpoint, data?.uriData), {
             method: "PUT",
-            headers: headers,
-            body: JSON.stringify(data)
+            headers: {
+                "Content-Type": "application/json;charset=UTF-8",
+                ...data?.headers
+            },
+            body: JSON.stringify(data?.data)
         }).then(this.handleCallback);
     }
 
-    public delete<T>(endpoint: string, {data, headers, uriData}: PostableData): Promise<T>;
-    public delete(endpoint: string, {data, headers, uriData}: PostableData): Promise<unknown> {
-        return fetch(this.urlBuilder(endpoint, uriData), {
+    public put<T>(endpoint: string, data?: PostableData): Promise<T>;
+    public put(endpoint: string, data?: PostableData): Promise<any> {
+        return this.handleHttpCall(endpoint, (url, sendableData) => this.handlePut(url, sendableData), data);
+    }
+
+    private handleDelete(url: string, data?: PostableData) {
+        return fetch(this.urlBuilder(url, data?.uriData), {
             method: "DELETE",
-            headers: headers,
-            body: JSON.stringify(data)
-        }).then(this.handleCallback);
+            headers: {
+                "Content-Type": "application/json;charset=UTF-8",
+                ...data?.headers
+            },
+            body: JSON.stringify(data?.data)
+        }).then(this.handleCallback)
+    }
+
+    public delete<T>(endpoint: string, data?: PostableData): Promise<T>;
+    public delete(endpoint: string, data?: PostableData): Promise<unknown> {
+        return this.handleHttpCall(endpoint, (url, sendableData) => this.handleDelete(url, sendableData), data);
     }
 }

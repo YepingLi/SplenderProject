@@ -1,0 +1,15 @@
+export enum GameType {
+    BASE, ORIENT, TRADING_POSTS, CITIES
+}
+
+export enum GemType {
+    DIAMOND, EMERALD, ONYX, RUBY, SAPPHIRE, GOLD
+}
+
+export type ActionType = "TAKE_TOKEN" | "RESERVE_CARD" | "BUY_CARD" | "PAYMENT" | "TAKE_LEVEL_TWO" | "RESERVE_NOBLE" | "LEVEL_TWO_PAIR" | "TAKE_LEVEL_ONE"| "LEVEL_ONE_PAIR" | "CLAIM_NOBLE" | "BURN_TOKEN" | "BURN_BONUSES" | "DOUBLE_GOLD" | "LEVEL_TWO_PAIR" ;
+export type GemTypeString = "DIAMOND" | "EMERALD" | "ONYX" | "RUBY" | "SAPPHIRE" | "GOLD";
+export type Bonus = "DIAMOND" | "EMERALD" | "ONYX" | "RUBY" | "SAPPHIRE" | "GOLD" | "NONE";
+export type Power = "FREE_GEM_ON_PURCHASE" | "TWO_AND_ONE" | "DOUBLE_GOLD" | "FREE_POINTS" | "POINTS_PER_MARKER" ;
+
+
+

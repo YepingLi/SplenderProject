@@ -15,7 +15,7 @@ interface PasswordProps {
  */
 const PasswordInput: React.FC<PasswordProps> =  ({pwd, setPwd, labelValue}) => {
     return(
-        <div>
+        <div className="flex-div">
             <label className="password-label">{labelValue}:</label>
             <input 
                 type="password"

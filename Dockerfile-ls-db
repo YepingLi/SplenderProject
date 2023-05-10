@@ -1,0 +1,8 @@
+FROM mysql/mysql-server:5.7 AS database
+
+## Source of Dockerfile :https://github.com/m5c/BoardGamePlatform.git
+## Author of Source Files: maximilian schiedermeier
+## Usage directly of Dockerfile-ls-db from maximilian schiedermeier
+
+ENV MYSQL_ROOT_PASSWORD=OojeeWood1ae
+COPY LobbyService/ls-db-setup.sql /docker-entrypoint-initdb.d/

@@ -3,6 +3,7 @@ package org.mcgill.splendorapi.connector.model;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.databind.annotation.JsonDeserialize;
+import java.time.LocalDateTime;
 import lombok.Builder;
 import lombok.Getter;
 import lombok.extern.jackson.Jacksonized;
@@ -16,15 +17,16 @@ public class Token extends TokenCredentials {
   private final Integer expiresIn;
   private final String refreshToken;
   private final Scope scope;
+  private final LocalDateTime createdTime = LocalDateTime.now();
 
   /**
    * Creates the token object.
    *
-   * @param type The token type
-   * @param tokenScope the token scope
-   * @param refreshTok the refresh token
+   * @param type           The token type
+   * @param tokenScope     the token scope
+   * @param refreshTok     the refresh token
    * @param tokenExpiresIn expiration of the token
-   * @param accessToken the access token
+   * @param accessToken    the access token
    */
   @JsonIgnoreProperties(ignoreUnknown = true)
   @Jacksonized
@@ -45,4 +47,9 @@ public class Token extends TokenCredentials {
     refreshToken = refreshTok;
     scope = tokenScope;
   }
+
+  public boolean isExpired() {
+    return LocalDateTime.now().isAfter(createdTime.plusSeconds(expiresIn));
+  }
+
 }
